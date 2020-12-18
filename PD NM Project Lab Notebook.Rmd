@@ -1,0 +1,920 @@
+---
+title: "Laboratory Notebook"
+output: html_notebook
+---
+
+July 17, 2020
+
+Parkinson's disease (PD) is the second most common neurodegenerative disease in the world [1]. It is characterized by the loss of dopaminergic neurons in the substantia nigra pars compacta (SNpc), as well as the caudal-to-rostral development of α-synclein-containing Lewy bodies (LB) [1]. Neurons containing neuromelanin (NM), including the dopaminergic neurons of the SNpc, have been observed to be selectively vulnerable to neurodegeneration and death in PD [2]. However, not much is understood about the biological mechanisms behind this selective vulnerability, nor is it fully understood how NM impacts dopaminergic cell death. Interestingly, age is the greatest risk factor for PD [1], and NM is has been confirmed to accumulate in the SNpc with age in healthy individuals [2-6]. Furthermore, NM levels appear to be generally higher in PD patients [2,7], and numerous studies have suggested using brain MRIs to diagnose presymptomatic PD based on brain NM levels [2, 7-8]. Therefore, developing a better understanding of the biological mechanisms that contribute to age-dependent NM accumulation could shine some light onto the link between neuromelanin and dopaminergic cell death in Parkinson's disease.
+
+References:
+
+[1] A. Kouli, K. M. Torsney, and W. Kuan, “Parkinson’s Disease: Etiology, Neuropathology, and Pathogenesis,” pp. 3–26, 2018, doi: https://doi.org/10.15586/codonpublications.parkinsonsdisease.2018.ch1.
+
+[2] M. Vila, “Neuromelanin, aging, and neuronal vulnerability in Parkinson’s disease,” Mov. Disord., vol. 34, no. 10, pp. 1440–1451, 2019, doi: 10.1002/mds.27776.
+
+[3] R. L. Haining and C. Achat-Mendes, “Neuromelanin, one of the most overlooked molecules in modern medicine, is not a spectator,” Neural Regen. Res., vol. 12, no. 3, pp. 372–375, 2017, doi: 10.4103/1673-5374.202928.
+
+[4] J. Segura-Aguilar and I. Paris, “Handbook of neurotoxicity,” Handb. Neurotox., vol. 1–3, pp. 1–2371, 2014, doi: 10.1007/978-1-4614-5836-4.
+
+[5] P. Muñoz, S. Huenchuguala, I. Paris, and J. Segura-Aguilar, “Dopamine oxidation and autophagy,” Parkinsons. Dis., vol. 2012, 2012, doi: 10.1155/2012/920953.
+
+[6] A. Herrera, P. Muñoz, H. W. M. Steinbusch, and J. Segura-Aguilar, “Are Dopamine Oxidation Metabolites Involved in the Loss of Dopaminergic Neurons in the Nigrostriatal System in Parkinson’s Disease?,” ACS Chem. Neurosci., vol. 8, no. 4, pp. 702–711, 2017, doi: 10.1021/acschemneuro.7b00034.
+
+[7] I. Carballo-Carbajal et al., “Brain tyrosinase overexpression implicates age-dependent neuromelanin production in Parkinson’s disease pathogenesis,” Nat. Commun., vol. 10, no. 1, 2019, doi: 10.1038/s41467-019-08858-y.
+
+[8] D. Sulzer et al., “Neuromelanin detection by magnetic resonance imaging (MRI) and its promise as a biomarker for Parkinson’s disease,” Nature, vol. 4, no. 1. Nature Publishing Group, Dec. 01, 2018, doi: 10.1038/s41531-018-0047-3.
+
+____________________________________________________________________________________________
+
+July 18, 2020
+
+Upon further literature review, it was discovered that there is one known pathway commonly noted in the literature that is connected to both dopaminergic cell death and neuromelanin: dopamine oxidation. Dopamine oxidation is assumed to be a spontaneous process that culminates in neuromelanin formation [9]. Dopamine auto-oxdizes in the cytosol of dopaminergic neurons to form dopamine-o-quinone, and continues to form aminochrome [9-11]. Aminochrome is the most stable quinone formed in this pathway, and has been linked to numerous neurodegenerative mechanisms [9-11], and a mouse model of aminochrome has been able to induce dopaminergic neuron degeneration but not death [12]. Aminochrome then forms 5,6-indolequinone, which has been deteced in neuromelanin granules along with a number of other dopamine oxidation products [9-11]. Dopamine can be prevented from oxidizing in the cytosol by packing it into low pH synaptic vesicles by the action of the VMAT2 enzyme [13]. Presumably, if more dopamine is produced, the oxidation and the resulting neurotoxicity might increase as well. However, no study has been able to induce neurodegeneration or dopaminergic neuron death in rodent models by solely increasing dopamine levels [2], so there may be more involved in this pathway than previously speculated.
+
+References:
+
+[9] A. Herrera, P. Muñoz, H. W. M. Steinbusch, and J. Segura-Aguilar, “Are Dopamine Oxidation Metabolites Involved in the Loss of Dopaminergic Neurons in the Nigrostriatal System in Parkinson’s Disease?,” ACS Chem. Neurosci., vol. 8, no. 4, pp. 702–711, 2017, doi: 10.1021/acschemneuro.7b00034.
+
+[10] J. Segura-Aguilar and I. Paris, “Handbook of neurotoxicity,” Handb. Neurotox., vol. 1–3, pp. 1–2371, 2014, doi: 10.1007/978-1-4614-5836-4.
+
+[11] P. Muñoz, S. Huenchuguala, I. Paris, and J. Segura-Aguilar, “Dopamine oxidation and autophagy,” Parkinsons. Dis., vol. 2012, 2012, doi: 10.1155/2012/920953.
+
+[12] A. Herrera et al., “Aminochrome induces dopaminergic neuronal dysfunction: a new animal model for Parkinson’s disease,” Cell. Mol. Life Sci., 2016, doi: 10.1007/s00018-016-2182-5.
+
+[13] K. M. Lohr and G. W. Miller, “VMAT2 and Parkinson’s disease: harnessing the dopamine vesicle,” NCBI, vol. 14, no. 10, pp. 1115–1117, 2014, doi: 10.1586/14737175.2014.960399.VMAT2.
+
+____________________________________________________________________________________________
+
+July 19, 2020
+
+RESEARCH RATIONALE
+
+Recently, the dopamine oxidation pathway and neuromelanin gave been suggested to contribute to the neurotoxic mechanisms that cause Parkinson’s disease (PD), the second most common neurodegenerative disorder in the world. The goal of this research is to determine the extent of involvement of numerous genes regulating this pathway and to identify new pathways contributing to neuromelanin formation using gene expression data.
+
+____________________________________________________________________________________________
+
+July 20, 2020
+
+Based on a review of literature, the target genes for this study were determined. Although dopamine oxidation itself is assumed to be spontaneous, there are a number of antioxidant pathways that are catalyzed by enzymes and therefore linked to genes and gene expression. These are the genes that have been shown to be involved in the dopamine oxidation pathway in some way.
+
+  - Tyrosine Hydroxylase (TH)
+  - Aromatic L-amino acid decarboxylase (DDC)
+  - Vesicular Monoamine Transporter 2 (SLC18A2)
+  - Dopamine Active Transporter (SLC6A3)
+  - Glutathione S-Transferase Mu 2 (GSTM2)
+  - DT-diaphorase (NQO1)
+  - Monoamine Oxidase A (MAOA)
+  - Monoamine Oxidase B (MAOB)
+  - Catechol-O-methyltransferase (COMT)
+  
+TH and DDC are both involved in dopamine synthesis [2, 9-11]. SLC18A2 (the gene coding for the VMAT2 enzyme), as explained previously, works to pack dopamine into synaptic vesicles to prevent its oxidation [13]. It is important to note that VMAT2 levels have been inversely correlated with neuromelanin levels, and the VMAT2 enzyme has been observed ot be dysfunctional in PD [13]. SLC6A3 codes for the dopamine active transporter, an enzyme which transfers dopamine from extracellular matrix to dopaminergic neuron cytosol [9]. GSTM2 and NQO1 both code for enzymes that are involved in metabolizing aminochrome into non-neurotoxic products, and therefore have been suggested to be neuroprotective against aminochrome [9-11]. MAOA, MAOB, and COMT are involved in two antioxidant pathways that prevent dopamine oxidation by metabolizing dopamine into homovanillic acid [9-11].
+
+It has not been commonly noted in the literature that any of these genes are differentially expressed in the brains of Parkinson's patients and normal people, although one study noted that TH and SLC6A3 are slightly downregulated in the dopaminergic neurons of Parkinson's patient, according to a qRT-PCR analysis [14]. The evidence of this downregulation, however, was weak and contradicted microarray results from the same study which noted no downregulation of those genes, so no clear conclusion could be established.
+
+References: 
+
+[14] F. Simunovic et al., “Gene expression profiling of substantia nigra dopamine neurons: further insights into Parkinson’s disease pathology,” Brain, vol. 132, no. 7, pp. 1795–1809, 2009, doi: 10.1093/brain/awn323.
+
+____________________________________________________________________________________________
+
+July 21, 2020
+
+The objectives were determined. Overall goals of this study include: 
+  
+  1) Age in SN: Analyzing gene expression in substantia nigra of non-neurological people of different ages and Parkinson's patients of different ages
+  2) mDBR (melanized dopaminergic brain region expression analysis): Analyzing gene expression in melanized and non-melanized dopaminergic brain regions of non-neurological people and Parkinson's patients
+  
+This study can be characterized as an observational study, as the data was obtained from available online sources and no treatment was applied to the subjects from which the samples were obtained.
+  
+Preliminary datasets to use for analysis were also collected:
+  
+  1) Age in SN
+      - Non-neurological individuals: UK Brain Expression Consortium (GSE46706)
+      - Parkinson's patients: GSE8397, GSE20292
+  2) mDBR
+      - Non-neurological individuals (only): Allen Human Brain Atlas
+
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+AGE IN SN - NON-NEUROLOGICAL INDIVIDUALS
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+July 22, 2020 
+
+  The SuperSeries GSE46706 was loaded into RStudio using the getGEO() function from the GEOquery package. GSE46706 was generated by UK Brain Expression Consortium, and contains gene expression data in the brain from a large cohort of neurologically and neuropathologically normal individuals. This SuperSeries consists of two platforms, GPL5175 and GPL5188, both consisting of Affymetrix Human Exon 1.0 ST Arrays, and corresponding to SubSeries GSE60862 and GSE60863 respectively. GPL5175 is the transcript (gene) version, and thus GSE60862 contains a gene-level analysis of expression, and GPL5188 is the probe (exon) version, and thus GSE60863 is contains an exon-level analysis. Each SubSeries consists of 1231 samples from 134 Caucasian individuals. It was initially submitted to GEO May 7, 2013, and updated Aug 12, 2019.
+  
+  The arrays from both SubSeries had been pre-processed using RMA quantile normalization with background correction. Therefore, normalization after loading the data would most likely not be necessary.
+  
+```{r}
+library(GEOquery)
+
+#Load in GSE46706, store as large list
+gset <- getGEO('GSE46706', GSEMatrix = TRUE)
+
+```
+
+
+  Gene expression data from GSE46706 (GPL5157) was read as a numeric matrix (gene), with columns as samples and rows as gene probes. Samples were lined with the age of the donor from which the sample was obtained and the brain region of the sample (gene_filt).
+  
+  gene_filt was then filtered for expression data in the substantia nigra (gene_filt_SN), which yielded 101 samples. Since gene_filt was transposed before filtering, gene_filt_SN contained rows as samples (observations) and columns as gene probes (variables). Age, as aligned with the substantia nigra samples, was extracted as its own numeric vector called age_gene_SN to use for computing correlations using the cor() and cor.test() functions in the future. While gene_filt_SN, after cleaning up the data frame, only contained the expression data, a copy of gene_filt_SN, gene_filt_SN_with_age, was made that included the age column as well.
+
+```{r}
+library(GEOquery)
+library(tidyverse)
+library(stringr)
+
+# to avoid scientific notation
+options(scipen = 999)
+
+########################## PREPARE DATA ##########################
+
+# Gene expression microarray data. Genes are listed using numeric IDs.
+gene <- gset[["GSE46706-GPL5175_series_matrix.txt.gz"]]@assayData[["exprs"]]
+
+# Gives age of donor and brain region for each sample
+gene_sample_annotations <- gset[["GSE46706-GPL5175_series_matrix.txt.gz"]]@phenoData@data
+
+# Names of genes that correspond to each numeric ID
+gene_names <- gset[["GSE46706-GPL5175_series_matrix.txt.gz"]]@featureData@data
+
+# Observe features of data frames
+head(gene)
+head(gene_sample_annotations)
+head(gene_names)
+
+
+# add age of donor (column 48) and brain region (column 11) for each sample
+gene_filt <- t(gene)
+gene_filt <- gene_filt %>% 
+  cbind(gene_sample_annotations[,11], gene_sample_annotations[,48]) %>% 
+  data.frame()
+
+
+# filter for only substantia nigra (SN) gene expression data
+gene_filt_SN <- gene_filt %>% 
+  filter(V26494 == 'brain region: substantia nigra')
+
+
+# extract age as its own numeric vector
+extract_age_gene <- function(gene_filt_brain_region) {
+  
+  # All data frames filtered for brain region have same genes (columns), therefore $V26495 works for all filtered data frames
+  age_gene <- as.numeric(gene_filt_brain_region$V26495)
+  
+  return(age_gene)
+  
+}
+
+age_gene_SN <- extract_age_gene(gene_filt_SN)
+
+# Creates a numeric data frame version of the inputted data frame
+# All expression values must be converted to numeric, because using cbind() on gene_filt converts them all to character values
+convert_to_numeric <- function(gene_expression_dataframe) {
+  
+  df <- matrix(data = NA, nrow = dim(gene_expression_dataframe)[1], ncol =
+                 dim(gene_expression_dataframe)[2])
+  
+  for (i in 1:dim(gene_expression_dataframe)[2]) {
+    df[,i] <- c(as.numeric(gene_expression_dataframe[,i]))
+  }
+  
+  rownames(df) <- row.names(gene_expression_dataframe)
+  colnames(df) <- colnames(gene_expression_dataframe)
+  
+  return(df)
+}
+
+# Call convert_to_numeric function, with parameter being gene_filt_SN without the brain region and age columns
+gene_filt_SN <- convert_to_numeric(gene_filt_SN[,-c(26494,26495)])
+gene_filt_SN_with_age <- cbind.data.frame(gene_filt_SN, age_gene_SN)
+
+```
+
+  After exploring the gene_names data frame, it appeared that there were two different probes corresponding to the DDC gene (3001557 and 3050388), and two different probes both corresponding to the MAOA gene (3975227 and 4055661). For each gene, the ID number that had more probes was chosen, as it was believed that that would give more accurate results. For DDC the ID chosen was 3050388, and for MAOA the ID chosen was 3975227.
+  
+  After determining the appropirate gene IDs to use for each target gene, the expression data of the target genes in the substantia nigra was gathered into one data frame called target_gene_expression_SN, in case such a data frame would be useful in the future. However, it is important to note that this data frame was formed using the gather() function from dplyr, meaning it was formatted such that each row corresponded to the expression value for a specific gene in a specific sample.
+
+  
+Target Gene IDs:
+  
+  - TH - 3359180
+  - DDC - 3050388
+  - SLC18A2 - 3266279
+  - SLC6A3 - 2845921
+  - GSTM2 - 2350952
+  - NQO1 - 3696666
+  - MAOA - 3975227
+  - MAOB - 4006210
+  - COMT - 3937092
+
+```{r}
+library(hash)
+
+########################## GATHER TARGET GENE EXPRESSION DATA ########################## 
+
+# keys as gene IDs and values as gene names
+target_gene_IDs_to_names <- hash(c('X3359180', 'X3050388', 'X3266279', 'X2845921', 'X2350952', 'X3696666', 'X3975227', 'X4006210',
+                                     'X3937092'), 
+                                   c('TH', 'DDC', 'SLC18A2', 'SLC6A3', 'GSTM2', 'NQO1','MAOA', 'MAOB', 'COMT'))
+
+# gathering expression data for all target genes in a certain brain region into 1 data frame
+target_genes_only <- function(gene_filt_brain_region) {
+  
+  gene_filt_brain_region <- data.frame(gene_filt_brain_region)
+  target_gene_expression <- gene_filt_brain_region %>% 
+    select('X3359180', 'X3050388', 'X3266279', 'X2845921', 'X2350952', 'X3696666', 'X3975227', 'X4006210', 'X3937092') %>% 
+      gather(key = 'Gene', value = 'Expression', na.rm = TRUE)
+
+  # convert all gene IDs in target_gene_expression to gene names
+  for (i in 1:dim(target_gene_expression)[1]) {
+    target_gene_expression[i,1] <- target_gene_IDs_to_names[[target_gene_expression[i,1]]]
+  }
+  
+  return(target_gene_expression)
+}
+
+target_gene_expression_SN <- target_genes_only(gene_filt_SN)
+
+
+```
+
+
+____________________________________________________________________________________________
+
+July 23, 2020
+
+  Exploratory analysis of gene_filt_SN was performed. A boxplot of all 101 samples (columns) revealed that the data was relatively median-centered. This is reasonable, since it was indicated on the page of each sample that the arrays were pre-processed using RMA quantile normalization with background correction. If any of the boxplots deviated significantly than the others, this could have indicated that the fluorescence for that sample was either systematically higher or lower than for others, causing the reads for it to be erroneously higher or lower than for others. In such cases, quantile normalization would be necessary. However, as the data was relatively median-centered, the data did not need to be normalized. This is reasonable since the study from which the data was obtained did note that RMA normalization with background correction had been performed on the data before it was submitted to GEO.
+
+```{r}
+
+library(dplyr)
+library(preprocessCore)
+
+# SN gene expression data does appear relatively median-centered, therefore normalization is not necessary. t(gene_filt_SN) makes the boxplot look at the distributions of gene expression values for all the genes across multiple samples.
+boxplot(t(gene_filt_SN))
+
+# Quantile normalized
+gene_filt_SN %>% t %>% normalize.quantiles %>% boxplot
+
+hist(t(gene_filt_SN), main = 'Histogram of Substantia Nigra Gene Expression Data', xlab = 'Expression')
+gene_filt_SN %>% t %>% as.matrix %>% normalize.quantiles %>% hist(main = 'Histogram of normalized Substantia Nigra Gene Expression Data', xlab = 'Expression')
+
+# log2 transform of gene_filt_SN
+gene_filt_SN_log2 <- log2(gene_filt_SN)
+
+boxplot(t(gene_filt_SN_log2))
+gene_filt_SN_log2 %>% t %>% as.matrix %>% normalize.quantiles %>% boxplot
+
+hist(gene_filt_SN_log2, main = 'Histogram of log2-transformed Substantia Nigra Gene Expression Data', xlab = 'Expression')
+gene_filt_SN_log2 %>% t %>% as.matrix %>% normalize.quantiles %>% hist(main = 'Histogram of normalized, log2-transformed Substantia Nigra Gene Expression Data', xlab = 'Expression')
+
+```
+
+  It is apparent that neither quantile normalization nor logarithmic transformations are necessary, as the raw expression data is median-centered and roughly symmetric. The log2 transformation only makes the data more left-skewed. Therefore, the raw data frame gene_filt_SN will be used for further analyses.
+  
+  From the first boxplot (), we can also see that there are many more high outliers in the data than low outliers. This means there are many more gene with very high expression in the substantia nigra than genes with very low expression in the substantia nigra.
+
+  Additionally, the age data (age_gene_SN) needed to be checked to ensure that it matched a normal distribution. Using a significance level of α = 0.05, a Shapiro-Wilk normality test gave a p-value of 0.1511, indicating that the data was not significantly different from a normal distribution. To further confirm that age_gene_SN matched a normal distribution, a histogram of age_gene_SN was drawn, and it showed that the data was roughly symmetric. A normality plot (or quantile-quantile plot) also showed negligible deviation from a normal distribution, as the correlation between the age data and a normal distribution appeared strong with few outliers from the trend.
+
+```{r}
+library(ggpubr)
+
+shapiro.test(age_gene_SN)
+
+hist(age_gene_SN, main = 'Histogram of Patient Ages', xlab = 'Age of Patient')
+
+ggqqplot(age_gene_SN, ylab = 'Patient Ages')
+
+```
+
+____________________________________________________________________________________________
+
+July 24, 2020
+
+  Downstream analysis of gene_filt_SN was performed.
+  
+```{r}
+
+```
+
+____________________________________________________________________________________________
+
+July 25, 2020
+
+  Further downstream analysis of gene_filt_SN was performed. A correlation matrix of the target genes and the age of the samples was computed using the rcorr() function from the Hmisc package. Unfortunately, the original target_gene_expression_SN data frame, which was created using the gather() function, would not be useful in this case. The target_gene_expression_SN data frame was redefined to contain the columns has samples at nine rows, each row correspodning to a different target gene. The correlation matrix showed both correlations between target gene expression in the substantia nigra and patient age, and correlations between the expression of different target genes with each other to determine their interconnectedness. The rcorr() function also outputted a matrix of the p-values of correlation. The output of this function was stored in the list cor_matrix_target_SN. The correlation matrix was also visualized using the _____ function.
+    
+
+```{r}
+
+# Gene IDs
+# TH - 3359180
+# DDC - 3050388 (use this), 3001557
+# SLC18A2 - 3266279
+# SLC6A3 - 2845921
+# GSTM2 - 2350952
+# NQO1 - 3696666
+# MAOA - 3975227 (use this), 4055661
+# MAOB - 4006210
+# COMT - 3937092
+
+library(Hmisc)
+
+# list of gene IDs of target genes
+target_genes = c("X3359180", "X3050388", "X3266279", "X2845921", "X2350952", "X3696666", "X3975227", "X4006210", "X3937092")
+
+target_gene_expression_SN <- matrix(data = NA, nrow = length(target_genes), ncol = dim(gene_filt_SN)[1])
+target_gene_expression_SN <- data.frame(target_gene_expression_SN)
+
+for (i in 1:length(target_genes)) {
+  df <- gene_filt_SN %>% t %>% data.frame %>% filter(rownames(data.frame(t(gene_filt_SN))) == as.character(target_genes[i]))
+  target_gene_expression_SN[i,] <- df
+}
+
+colnames(target_gene_expression_SN) <- rownames(gene_filt_SN)
+rownames(target_gene_expression_SN) <- target_genes
+
+for (i in 1:length(rownames(target_gene_expression_SN))) {
+  rownames(target_gene_expression_SN)[i] <- target_gene_IDs_to_names[[rownames(target_gene_expression_SN)[i]]]
+}
+
+target_gene_expression_SN <- target_gene_expression_SN %>% add_row()
+target_gene_expression_SN[10,] <- age_gene_SN
+rownames(target_gene_expression_SN)[10] <- "age"
+
+cor_matrix_target_SN <- rcorr(as.matrix(t(target_gene_expression_SN)))
+cor_matrix_target_SN
+
+
+
+
+```
+
+____________________________________________________________________________________________
+
+July 26, 2020
+
+  To minimize the false discovery rate of significant correlations, the Benjamini-Hochberg procedure was applied to all the p-values using the p.adjust() function. First, p-values of correlation between age and all the exons, not just the exons of the target genes, had to be computed. Then the adjusted p-values were filtered again for those of the exons of the target genes.
+  
+```{r}
+
+##Gene IDs
+# TH - 3359180
+# DDC - 3050388 (use this), 3001557
+# SLC18A2 - 3266279
+# SLC6A3 - 2845921
+# GSTM2 - 2350952
+# NQO1 - 3696666
+# MAOA - 3975227 (use this), 4055661
+# MAOB - 4006210
+# COMT - 3937092
+
+
+
+
+```
+
+____________________________________________________________________________________________
+
+July 27, 2020
+
+  No significant correlations were observed for any of the target genes. However, it is possible that the target genes may not be only genes involved in neuromelanin formation and/or dopamine oxidation noted in literature; there may be genes involved in these processes that are not noted in literature. Therefore, correlations were computed for all the genes, and the p-values of correlation were adjusted using the same method used for the target genes. The goal of this was to identify which genes did change in expression with age, and then later determine whether they have some relationship to neuromelanin formation or the dopamine oxidation pathway, either based on further literature review or melanized dopaminergic brain region (mDBR) differential expression analysis.
+
+```{r}
+
+all_gene_IDs = as.numeric(colnames(gene_filt_SN))
+
+cor_all_genes = compute_correlation_gene(all_gene_IDs)
+
+#Correct p-values here with Benajmini-Hochberg method
+
+
+
+print(cor_all_genes)
+
+```
+
+____________________________________________________________________________________________
+
+August 8, 2020
+
+  Exon microarray data from GSE46706 (GPL517) was read into a numeric matrix (exon), with columns as samples and rows as exon probes. Samples were lined with the age of the donor from which the sample was obtained and the brain region of the sample, to form the data frame exon_filt. Each exon was then aligned to a specific transcript cluster ID within the exon_filt data frame. This would allow for filtering the exons based on their corresponding gene, as each transcript cluster ID corresponded to one gene (this means multiple exons, or columns, in exon_filt could have the same transcript cluster ID).
+  
+  exon_filt was then filtered for expression data in the substantia nigra, the output of which was stored in the data frame exon_filt_SN. As rbind() and cbind() had been used to add brain regions, age of patient, transcript cluster IDs, and the type of exon to exon_filt, the expression values of exon_filt were coerced into the character data. Because exon_filt was filtered to make exon_filt_SN, the expression values of exon_filt_SN were also character values. The expression values in exon_filt_SN were converted to numeric and stored in a new data frame called exon_filt_SN_numeric. In the end, both exon_filt_SN and exon_filt_SN_numeric contained the rows as different samples and columns as different exons. They both also contained a row at the bottom that contained the transcript cluster IDs for each column (i.e., exon), and exon_filt_SN had two columns at the end, one indicating the brain region of each sample (which was all substantia nigra), and another indicating the age of the patient sample.
+  
+  Age, as aligned with the substantia nigra samples in exon_filt_SN, was extracted as its own numeric vector age_exon to use for computing correlations using the cor() and cor.test() functions.
+
+```{r}
+library(GEOquery)
+library(dplyr)
+library(stringr)
+
+# to avoid scientific notation
+options(scipen = 999)
+
+# Exon expression microarray data. Exon are listed using numeric transcript cluster IDs.
+exon <- gset[["GSE46706-GPL5188_series_matrix.txt.gz"]]@assayData[["exprs"]]
+# Gives age of donor and brain region for each sample
+exon_sample_annotations <- gset[["GSE46706-GPL5188_series_matrix.txt.gz"]]@phenoData@data
+# Shows names of genes that correspond to each numeric ID
+exon_names <- gset[["GSE46706-GPL5188_series_matrix.txt.gz"]]@featureData@data
+
+# Add transcript cluster IDs, sample ages, sample brain regions
+exon_filt <- exon
+# Add sample ages and brain regions as two extra rows at bottom of exon_filt
+exon_filt <- exon_filt %>% rbind(exon_sample_annotations[,11], exon_sample_annotations[,46])
+# Add exon transcript cluster IDs as extra column at end of exon_filt
+exon_filt <- exon_filt %>% cbind(exon_names[,10], exon_names[,15]) #provides a warning that doesn't matter. exon_names[,15] adds label of core/extended/full exons 
+colnames(exon_filt)[1232] <- 'Transcript Cluster ID'
+# Put 'brain region: substantia nigra' in Transcript Cluster ID column so that it includes the transcript cluster ID row after it is filtered
+exon_filt[291705,1232] <- 'brain region: substantia nigra'
+exon_filt[291706,1232] <- NA
+
+
+# filter exon_filt for substantia nigra samples only
+exon_filt <- data.frame(t(exon_filt)) #rows as samples, columns as exons, to filter for samples in the substantia nigra
+exon_filt_SN <- exon_filt %>% filter(exon_filt[,291705] == 'brain region: substantia nigra')
+
+# change column labels for exon_filt to avoid confusion in future reference
+colnames(exon_filt)[291706] = 'age'
+colnames(exon_filt)[291705] = 'brain_region'
+row.names(exon_filt)[1233] = 'exon_type'
+
+# at these two positions, the exon type repeats
+exon_filt[1233,291705] <- NA
+exon_filt[1233,291706] <- NA
+
+# extract age as its own numeric vector
+age_exon <- exon_filt_SN[,291706]
+age_exon <- as.numeric(age_exon[-102])
+
+# convert all applicable values in exon_filt_SN to numeric
+exon_filt_SN_numeric <- convert_to_numeric(exon_filt_SN[,c(-291705,-291706)])
+
+# print first 100 exons
+head(exon_filt_SN_numeric[,1:100])
+
+```
+
+  Before downstream analysis could be performed, the exploratory analysis needed to be performed to determine whether normalization would be necessary or not. A boxplot of the exon expression values in each of the 101 samples revealed that the data was relatively median-centered, indicating that quantile normalization was not necessary. A comparison of this boxplot and a boxplot with the quantile normalized exon expression values also supports this claim.
+```{r}
+library(preprocessCore)
+
+# data does appear median centered
+boxplot(t(exon_filt_SN_numeric[-102,]))
+
+# quantile normalizing the exon data and making a boxplot for comparison with original data
+boxplot(normalize.quantiles(as.matrix(t(exon_filt_SN_numeric[-102,]))))
+
+```
+
+  The exploratory analysis did reveal that there were many more high outliers than low outliers, which means that exons are generally more likely to be overexpressed than underexpressed in the substantia nigra. This trend was even more prevalent than in the gene expression data, as the exon expression data had almost no low outliers.
+
+  At this point, the data was ready for downstream analysis. This would consist of computing correlations between exon expression and age of the sample donor.
+
+____________________________________________________________________________________________
+
+August 9, 2020
+
+  Correlations analysis tests were performed for all target genes, computing the correlation between exon expression and the age of the sample donor. The format was as follows:
+
+  - Correlation Coefficient: cor(normalized exon expression data, age, method = 'kendall or pearson')
+  - P-value of correlation: cor.test(normalized exon expression data, age, method = 'kendall or pearson')[['p.value']]
+
+  For this experiment, the significance level was set to α = 0.05. For exon data that did not match a normal distribution (Shapiro-Wilk Normality Test p-value < 0.05), a Kendall correlation was performed. For exon data that did match a normal distribution (Shapiro-Wilk Normality Test p-value > 0.05), a Pearson's correlation was performed.
+  
+  For each target gene, analysis results were organized into a matrix, with correlation coefficients and raw p-values as columns and the different exons as rows.
+  
+  Finally, the matrices for each gene were all compiled into a list called all_exon_correlations.
+
+```{r}
+
+# Transcript Cluster IDs for each gene
+# TH - 3359180
+# DDC - 3050388
+# SLC18A2 - 3266279
+# SLC6A3 - 2845921
+# GSTM2 - 2350952
+# NQO1 - 3696666
+# MAOA - 3975227
+# MAOB - 4006210
+# COMT - 3937092
+
+# returns data frame with raw p-value of correlation and correlation coefficent (columns) for each exon (rows).
+compute_correlation_exon <- function(Cluster_ID) {
+  # filter exon_filt_SN for all exons having the belonging to the same gene
+  Exon <- filter(data.frame(exon_filt_SN), exon_filt_SN[,102] == Cluster_ID)
+  Exon <- Exon[,-102]
+  
+  # correlation test
+  Exon <- data.frame(t(Exon))
+  cor_Exon <- matrix(data = NA, nrow = dim(Exon)[2], ncol = 2)
+  colnames(cor_Exon) <- c('Raw p-value of correlation','Correlation coefficient')
+  rownames(cor_Exon) <- colnames(Exon)
+  for (i in 1:dim(Exon)[2]) {
+    if (shapiro.test(as.numeric(Exon[,i]))[["p.value"]] > 0.05) {
+      cor_Exon[i,1] <- cor.test(as.numeric(Exon[,i]), age_exon, method='pearson')[["p.value"]]
+      cor_Exon[i,2] <- cor(as.numeric(Exon[,i]), age_exon, method='pearson')
+    } else {
+      cor_Exon[i,1] <- cor.test(as.numeric(Exon[,i]), age_exon, method='kendall')[["p.value"]]
+      cor_Exon[i,2] <- cor(as.numeric(Exon[,i]), age_exon, method='kendall')
+    }
+  }
+  return(cor_Exon)
+}
+
+# all_exon_correlations <- data.frame(as.numeric(rbind(compute_correlation_exon(3359180),
+#                                                      compute_correlation_exon(3050388),
+#                                                      compute_correlation_exon(3266279),
+#                                                      compute_correlation_exon(2845921),
+#                                                      compute_correlation_exon(2350952),
+#                                                      compute_correlation_exon(3696666),
+#                                                      compute_correlation_exon(3975227),
+#                                                      compute_correlation_exon(4006210),
+#                                                      compute_correlation_exon(3937092)))
+
+cor_exon_TH <- compute_correlation_exon(3359180)
+cor_exon_DDC <- compute_correlation_exon(3050388)
+cor_exon_SLC18A2 <- compute_correlation_exon(3266279)
+cor_exon_SLC6A3 <- compute_correlation_exon(2845921)
+cor_exon_GSTM2 <- compute_correlation_exon(2350952)
+cor_exon_NQO1 <- compute_correlation_exon(3696666)
+cor_exon_MAOA <- compute_correlation_exon(3975227)
+cor_exon_MAOB <- compute_correlation_exon(4006210)
+cor_exon_COMT <- compute_correlation_exon(3937092)
+
+all_exon_correlations <- list[cor_exon_TH, cor_exon_DDC, cor_exon_SLC18A2, cor_exon_SLC6A3, 
+                              cor_exon_GSTM2, cor_exon_NQO1, cor_exon_MAOA, cor_exon_MAOB, 
+                              cor_exon_COMT]
+
+# print('TH')
+# print(cor_TH)
+# print('DDC')
+# print(cor_DDC)
+# print('SLC18A2')
+# print(cor_SLC18A2)
+# print('SLC6A3')
+# print(cor_SLC6A3)
+# print('GSTM2')
+# print(cor_GSTM2)
+# print('NQO1')
+# print(cor_NQO1)
+# print('MAOA')
+# print(cor_MAOA)
+# print('MAOB')
+# print(cor_MAOB)
+# print('COMT')
+# print(cor_COMT)
+
+```
+
+____________________________________________________________________________________________
+
+August 12, 2020
+
+  To minimize the false discovery rate of significant correlations, the Benjamini-Hochberg procedure was applied to all the p-values using the p.adjust() function. First, p-values of correlation between age and all the exons, not just the exons of the target genes, had to be computed. Then the adjusted p-values were filtered again for those of the exons of the target genes.
+
+```{r}
+# computing all raw p values of correlation. Each row is an exon.
+all_raw_p <- matrix(data = NA, nrow = dim(exon_filt_SN[,-102])[1], ncol = 1)
+
+for (i in 1:dim(exon_filt_SN[,-102])[1]) {
+  if (shapiro.test(as.numeric(exon_filt_SN[i,-102]))[["p.value"]] > 0.05) {
+    all_raw_p[i,] <- cor.test(as.numeric(exon_filt_SN[i,-102]), age, method='pearson')[["p.value"]]
+  } else {
+    all_raw_p[i,] <- cor.test(as.numeric(exon_filt_SN[i,-102]), age, method='kendall')[["p.value"]]
+  }
+}
+rownames(all_raw_p) <- rownames(exon_filt_SN)
+
+adj_p <- p.adjust(all_raw_p, method='BH')
+adj_p <- data.frame(cbind(adj_p, exon_filt_SN[,102]))
+
+cor_TH[,1] <- filter_all(adj_p, any_vars(. == 3359180))[,1]
+cor_DDC[,1] <- filter_all(adj_p, any_vars(. == 3050388))[,1]
+cor_SLC18A2[,1] <- filter_all(adj_p, any_vars(. == 3266279))[,1]
+cor_SLC6A3[,1] <- filter_all(adj_p, any_vars(. == 2845921))[,1]
+cor_GSTM2[,1] <- filter_all(adj_p, any_vars(. == 2350952))[,1]
+cor_NQO1[,1] <- filter_all(adj_p, any_vars(. == 3696666))[,1]
+cor_MAOA[,1] <- filter_all(adj_p, any_vars(. == 3975227))[,1]
+cor_MAOB[,1] <- filter_all(adj_p, any_vars(. == 4006210))[,1]
+cor_COMT[,1] <- filter_all(adj_p, any_vars(. == 3937092))[,1]
+
+print('TH')
+print(cor_TH)
+print('DDC')
+print(cor_DDC)
+print('SLC18A2')
+print(cor_SLC18A2)
+print('SLC6A3')
+print(cor_SLC6A3)
+print('GSTM2')
+print(cor_GSTM2)
+print('NQO1')
+print(cor_NQO1)
+print('MAOA')
+print(cor_MAOA)
+print('MAOB')
+print(cor_MAOB)
+print('COMT')
+print(cor_COMT)
+
+```
+
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+AGE IN SN - PD PATIENTS
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+
+August 20, 2020
+
+  GSE8397 and GSE20292 were loaded into RStudio using getGEO() function from GEOquery package. 
+  
+```{r}
+library(GEOquery)
+
+gset1 <- getGEO("GSE8397", GSEMatrix = TRUE)
+gset2 <- getGEO("GSE20292", GSEMatrix = TRUE)
+
+```
+
+  The datasets were explored. The samples in each dataset were filtered for only Parkinson's patients and expression in the substantia nigra (sample annotations), and the genes in each dataset were labeled with their gene IDs.
+  
+```{r}
+library(tidyverse)
+library(GEOquery)
+library(stringr)
+
+########### EXPLORING DATA ###########
+
+# GSE8397 info
+GSE8397_exp_gene <- gset1[["GSE8397-GPL96_series_matrix.txt.gz"]]@assayData[["exprs"]]
+GSE8397_sample_annotations <- gset1[["GSE8397-GPL96_series_matrix.txt.gz"]]@phenoData@data
+GSE8397_gene_IDs <- gset1[["GSE8397-GPL96_series_matrix.txt.gz"]]@featureData@data
+head(GSE8397_sample_annotations)
+head(GSE8397_gene_IDs)
+
+
+# GSE20292 info
+GSE20292_exp_gene <- gset2[["GSE20292_series_matrix.txt.gz"]]@assayData[["exprs"]]
+GSE20292_sample_annotations <- gset2[["GSE20292_series_matrix.txt.gz"]]@phenoData@data
+GSE20292_gene_IDs <- gset2[["GSE20292_series_matrix.txt.gz"]]@featureData@data
+head(GSE20292_sample_annotations)
+head(GSE20292_gene_IDs)
+
+
+########### PREPARING DATA ###########
+
+# GSE8397
+
+# Make samples as rows, genes as columns
+GSE8397_exp_gene <- t(GSE8397_exp_gene)
+
+# Make gene symbols column names in gene expression data frame
+colnames(GSE8397_exp_gene) <- GSE8397_gene_IDs[,"Gene Symbol"]
+
+# Add columns that for type of sample and age to gene expression data frame
+GSE8397_exp_gene <- t(GSE8397_exp_gene)
+GSE8397_exp_gene <- data.frame(GSE8397_exp_gene)
+GSE8397_exp_gene <- add_row(GSE8397_exp_gene, .before = 1)
+GSE8397_exp_gene <- add_row(GSE8397_exp_gene, .before = 1)
+GSE8397_exp_gene[1,] <- GSE8397_sample_annotations[,"title"] # this step for some reason converts everything to character values
+GSE8397_exp_gene[2,] <- as.numeric(str_sub(GSE8397_sample_annotations[,"age:ch1"], 1, 2))
+GSE8397_exp_gene <- data.frame(t(GSE8397_exp_gene))
+colnames(GSE8397_exp_gene)[1:2] <- c("sample_type", "age")
+
+# Extract age as its own vector
+GSE8397_age_gene <- as.numeric(GSE8397_exp_gene$age)
+
+
+# GSE20292
+ 
+# Make samples as rows, genes as columns
+GSE20292_exp_gene <- t(GSE20292_exp_gene)
+
+# Make gene symbols column names in gene expression data frame
+colnames(GSE20292_exp_gene) <- GSE20292_gene_IDs[,"Gene Symbol"]
+
+# Add columns that for type of sample and age to gene expression data frame
+GSE20292_exp_gene <- t(GSE20292_exp_gene)
+GSE20292_exp_gene <- data.frame(GSE20292_exp_gene)
+GSE20292_exp_gene <- add_row(GSE20292_exp_gene, .before = 1)
+GSE20292_exp_gene <- add_row(GSE20292_exp_gene, .before = 1)
+GSE20292_exp_gene[1,] <- GSE20292_sample_annotations[,"disease state:ch1"] # this step converts everything to the character data type
+GSE20292_exp_gene[2,] <- as.numeric(GSE20292_sample_annotations[,"age:ch1"])
+GSE20292_exp_gene <- data.frame(t(GSE20292_exp_gene))
+colnames(GSE20292_exp_gene)[1:2] <- c("sample_type", "age")
+
+# Extract age as its own vector
+GSE20292_age_gene <- as.numeric(GSE20292_exp_gene$age)
+
+
+########### FILTERING DATA ###########
+
+# GSE8397
+
+# Filter for expression in substantia nigra, for Parkinson's patients only
+GSE8397_exp_gene_SN_PD <- GSE8397_exp_gene[-c(1:14,24:31,47),]
+
+# Extract age for PD patients in substantia nigra as its own numeric vector
+GSE8397_age_gene_SN_PD <- as.numeric(GSE8397_exp_gene_SN_PD$age)
+
+# Filter for expression only in 9 target genes
+GSE8397_exp_gene_SN_PD <- add_row(data.frame(GSE8397_exp_gene_SN_PD), .before = 1)
+GSE8397_exp_gene_SN_PD[1,3:dim(GSE8397_exp_gene_SN_PD)[2]] <- GSE8397_gene_IDs[,"Gene Symbol"]
+GSE8397_exp_gene_SN_PD[1,1:2] <- c("sample_type", "age")
+GSE8397_exp_gene_SN_PD_target <- filter_all(data.frame(t(GSE8397_exp_gene_SN_PD)), any_vars(.=='GSTM2'|.=='NQO1'|.=='TH'|.=='SLC18A2'|.=='SLC6A3'|.=='DDC'|.=='COMT'|.=='MAOB'|.=='MAOA'|.=="sample_type"|.=="age"))
+GSE8397_exp_gene_SN_PD <- GSE8397_exp_gene_SN_PD[-1,]
+GSE8397_exp_gene_SN_PD_target <- t(GSE8397_exp_gene_SN_PD_target)[-1,]
+
+
+# GSE20292
+
+# Filter for expression in substantia nigra, for Parkinson's patients only
+GSE20292_exp_gene_SN_PD <- GSE20292_exp_gene %>% filter(sample_type == "Parkinsons disease")
+
+# Extract age for PD patients in substantia nigra as its own numeric vector
+GSE20292_age_gene_SN_PD <- as.numeric(GSE20292_exp_gene_SN_PD$age)
+
+# Filter for expression only in 9 target genes
+GSE20292_exp_gene_SN_PD <- add_row(data.frame(GSE20292_exp_gene_SN_PD), .before = 1)
+GSE20292_exp_gene_SN_PD[1,3:dim(GSE20292_exp_gene_SN_PD)[2]] <- GSE20292_gene_IDs[,"Gene Symbol"]
+GSE20292_exp_gene_SN_PD[1,1:2] <- c("sample_type", "age")
+GSE20292_exp_gene_SN_PD_target <- filter_all(data.frame(t(GSE20292_exp_gene_SN_PD)), any_vars(.=='GSTM2'|.=='NQO1'|.=='TH'|.=='SLC18A2'|.=='SLC6A3'|.=='DDC'|.=='COMT'|.=='MAOB'|.=='MAOA'|.=="sample_type"|.=="age"))
+GSE20292_exp_gene_SN_PD <- GSE20292_exp_gene_SN_PD[-1,]
+GSE20292_exp_gene_SN_PD_target <- t(GSE20292_exp_gene_SN_PD_target)[-1,]
+
+```
+
+____________________________________________________________________________________________
+
+August 22, 2020
+
+  During the filtering of the data frames, the expression values had been converted to the character data type. In order to perform analyses, they needed to be converted back to numeric. In order to do this, the convert_to_numeric function was applied to the GSE8397_exp_gene_SN_PD_target, GSE8397_exp_gene_SN_PD, GSE20292_exp_gene_SN_PD_target, and GSE20292_exp_gene_SN_PD data frames. The age and sample_type columns had to be removed first.
+  
+  The new function returned a data frame containing only the expression values for each gene without age or sample type labels. This was not a reason for concern since the age feature of each sample had been extracted previously.
+
+```{r}
+
+GSE8397_exp_gene_SN_PD <- convert_to_numeric(GSE8397_exp_gene_SN_PD[,-c(1:2)])
+GSE8397_exp_gene_SN_PD_target <- convert_to_numeric(GSE8397_exp_gene_SN_PD_target[,-c(1:2)])
+
+GSE20292_exp_gene_SN_PD <- convert_to_numeric(GSE20292_exp_gene_SN_PD[,-c(1:2)])
+GSE20292_exp_gene_SN_PD_target <- convert_to_numeric(GSE20292_exp_gene_SN_PD_target[,-c(1:2)])
+
+
+```
+
+____________________________________________________________________________________________
+
+August 25, 2020
+
+  Both expression data frames had 22283 rows, or 22283 different genes. In order to ensure that all gene expression data will be included when these data frames are joined, it needed to be confirmed that all genes were the same. The intersect() function was used to determine this. If the two data frames had expression on the exact same genes, the conditional expression will return "TRUE".
+
+```{r}
+library(dplyr)
+
+# Confirmation that the two data frames (for GSE8397 and GSE20292) have expression data on all the same genes
+dim(GSE8397_exp_gene_SN_PD)[2] == length(intersect(colnames(GSE8397_exp_gene_SN_PD), colnames(GSE20292_exp_gene_SN_PD)))
+
+# Confirmation that the two data frames (for GSE8397 and GSE20292) have expression data on all the same target genes
+dim(GSE8397_exp_gene_SN_PD_target)[2] == length(intersect(colnames(GSE8397_exp_gene_SN_PD_target), colnames(GSE20292_exp_gene_SN_PD_target)))
+
+```
+
+  After it was confirmed that the GSE20292_exp_gene_filt_PD_SN and GSE8397_exp_gene_filt_PD_SN contained expression data on all the same genes, they could be joined into one data frame.
+
+```{r}
+
+# Joining expression data from both data frames
+exp_gene_SN_PD <- rbind.data.frame(GSE8397_exp_gene_SN_PD, GSE20292_exp_gene_SN_PD)
+exp_gene_SN_PD_target <-  rbind.data.frame(GSE8397_exp_gene_SN_PD_target, GSE20292_exp_gene_SN_PD_target)
+
+# Combining age numeric vectors
+age_gene_SN_PD <- c(GSE8397_age_gene_SN_PD, GSE20292_age_gene_SN_PD)
+
+```
+
+____________________________________________________________________________________________
+
+August 29, 2020
+
+  Now that the gene expression data frames have been joined, exploratory analysis needs to be performed on the data to ensure that the joined datasets can be analyzed together.
+  
+```{r}
+
+boxplot(t(exp_gene_SN_PD))
+boxplot(t(exp_gene_SN_PD_target))
+
+```
+  
+  A boxplot revealed that the samples from GSE8397 gave systemically lower expression values than the samples from GSE20292. To allow for joint analysis, the joint data frame was quantile normalized. NOT SURE IF THIS METHOD IS VALID ... Read literature to confirm
+  
+```{r}
+library(preprocessCore)
+
+exp_gene_SN_PD <- normalize.quantiles(as.matrix(t(exp_gene_SN_PD)))
+
+exp_gene_SN_PD_target <- normalize.quantiles(as.matrix(t(exp_gene_SN_PD_target)))
+
+boxplot(exp_gene_SN_PD)
+boxplot(exp_gene_SN_PD_target)
+
+
+```
+  
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+mDBR
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+READING IN P-VALUES AND FOLD CHANGE OF TOP 10000 DIFERENTIALLY EXPRESSED PROBES
+```{r}
+library(readr)
+library(dplyr)
+
+
+# SN target, VTA contrast
+files_1 <- list.files(path = "/Users/rezaadibnia/Desktop/PD NM Project/mDBR - VTA vs SN/SN target, VTA contrast/", pattern = "Probes_.*csv", full.names = TRUE, ignore.case = FALSE)
+SNt_VTAc_probe_list <- lapply(files_1, read_csv)
+SNt_VTAc_probes <- data.frame(bind_rows(SNt_VTAc_probe_list))
+
+# VTA target, SN contrast
+files_2 <- list.files(path = "/Users/rezaadibnia/Desktop/PD NM Project/mDBR - VTA vs SN/VTA target, SN contrast/", pattern = "Probes_.*csv", full.names = TRUE, ignore.case = FALSE)
+VTAt_SNc_probe_list <- lapply(files_2, read_csv)
+VTAt_SNc_probes <- data.frame(bind_rows(VTAt_SNc_probe_list))
+
+rm(SNt_VTAc_probe_list)
+rm(VTAt_SNc_probe_list)
+
+```
+
+CORRECTING P-VALUES AND FILTERING FOR P < 0.05 and FC > 90% PERCENTILE (TOP 10%)
+```{r}
+library(tidyverse)
+
+# filters for top 10% of genes with highest FC compared to all genes, not just significantly differentially expressed genes
+
+# SN target, VTA contrast
+SNt_VTAc_probes$p <- p.adjust(SNt_VTAc_probes$p, method="BH")
+SNt_VTAc_probes <- SNt_VTAc_probes %>% filter(SNt_VTAc_probes$p < 0.05 & SNt_VTAc_probes$fold.change > quantile(SNt_VTAc_probes$fold.change, 0.90))
+
+# VTA target, SN contrast
+VTAt_SNc_probes$p <- p.adjust(VTAt_SNc_probes$p, method="BH")
+VTAt_SNc_probes <- VTAt_SNc_probes %>% filter(VTAt_SNc_probes$p < 0.05 & VTAt_SNc_probes$fold.change > quantile(VTAt_SNc_probes$fold.change, 0.90))
+
+```
+
+
+READING IN EXPRESSION DATA FOR TOP 10000 DIFFERENTIALLY EXPRESSED PROBES
+```{r}
+library(readr)
+library(dplyr)
+
+
+read_csv_labeled_header <- function(file) {
+  labels = c("Probe_IDs", "SN_1", "SN_2", "SN_3", "SN_4", "SN_5", "SN_6", "VTA_1", "VTA_2", "VTA_3", "VTA_4", "VTA_5", "VTA_6")
+  read_csv(file, col_names = labels)
+}
+
+# SN target, VTA contrast
+files_expr_1 <- list.files(path = "/Users/rezaadibnia/Desktop/PD NM Project/mDBR - VTA vs SN/SN target, VTA contrast/", pattern = "Expression_.*csv", full.names = TRUE, ignore.case = FALSE)
+SNt_VTAc_expr_list <- lapply(files_expr_1, read_csv_labeled_header)
+SNt_VTAc_expr <- data.frame(bind_rows(SNt_VTAc_expr_list))
+
+# VTA target, SN contrast
+files_expr_2 <- list.files(path = "/Users/rezaadibnia/Desktop/PD NM Project/mDBR - VTA vs SN/VTA target, SN contrast/", pattern = "Expression_.*csv", full.names = TRUE, ignore.case = FALSE)
+VTAt_SNc_expr_list <- lapply(files_expr_2, read_csv_labeled_header)
+VTAt_SNc_expr <- data.frame(bind_rows(VTAt_SNc_expr_list))
+
+rm(SNt_VTAc_expr_list)
+rm(VTAt_SNc_expr_list)
+
+# files_expr <- list.files(path = "/Users/rezaadibnia/Desktop/AHBA Full Data/Microarray/Expression", pattern = "MicroarrayExpression_.*csv", full.names = TRUE, ignore.case = FALSE)
+# all_expr_list <- lapply(files_expr, read_csv_labeled_header)
+# all_expr <- data.frame(bind_rows(all_expr_list))
+
+
+```
+
+
+JOINING DATA FRAMES INTO ONE
+```{r}
+library(dplyr)
+
+SNt_VTAc_expr <- SNt_VTAc_expr %>% inner_join(SNt_VTAc_probes, by = c("Probe_IDs" = "id"))
+VTAt_SNc_expr <- VTAt_SNc_expr %>% inner_join(VTAt_SNc_probes, by = c("Probe_IDs" = "id"))
+
+# combine all into data frame: SN target, VTA contrast
+VTAt_SNc_expr$fold.change <- -(VTAt_SNc_expr$fold.change)
+
+expr <- data.frame(bind_rows(SNt_VTAc_expr, VTAt_SNc_expr))
+
+```
+
