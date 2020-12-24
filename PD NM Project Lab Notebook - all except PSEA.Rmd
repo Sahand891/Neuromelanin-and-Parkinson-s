@@ -1,0 +1,1823 @@
+---
+title: "Laboratory Notebook"
+output: html_notebook
+---
+
+July 17, 2020
+
+Parkinson's disease (PD) is the second most common neurodegenerative disease in the world [1]. It is characterized by the loss of dopaminergic neurons in the substantia nigra pars compacta (SNpc), as well as the caudal-to-rostral development of α-synclein-containing Lewy bodies (LB) [1]. Neurons containing neuromelanin (NM), including the dopaminergic neurons of the SNpc, have been observed to be selectively vulnerable to neurodegeneration and death in PD [2]. However, not much is understood about the biological mechanisms behind this selective vulnerability, nor is it fully understood how NM impacts dopaminergic cell death. Interestingly, age is the greatest risk factor for PD [1], and NM is has been confirmed to accumulate in the SNpc with age in healthy individuals [2-6]. Furthermore, NM levels appear to be generally higher in PD patients [2,7], and numerous studies have suggested using brain MRIs to diagnose presymptomatic PD based on brain NM levels [2, 7-8]. Therefore, developing a better understanding of the biological mechanisms that contribute to age-dependent NM accumulation could shine some light onto the link between neuromelanin and dopaminergic cell death in Parkinson's disease.
+
+References:
+
+[1] A. Kouli, K. M. Torsney, and W. Kuan, “Parkinson’s Disease: Etiology, Neuropathology, and Pathogenesis,” pp. 3–26, 2018, doi: https://doi.org/10.15586/codonpublications.parkinsonsdisease.2018.ch1.
+
+[2] M. Vila, “Neuromelanin, aging, and neuronal vulnerability in Parkinson’s disease,” Mov. Disord., vol. 34, no. 10, pp. 1440–1451, 2019, doi: 10.1002/mds.27776.
+
+[3] R. L. Haining and C. Achat-Mendes, “Neuromelanin, one of the most overlooked molecules in modern medicine, is not a spectator,” Neural Regen. Res., vol. 12, no. 3, pp. 372–375, 2017, doi: 10.4103/1673-5374.202928.
+
+[4] J. Segura-Aguilar and I. Paris, “Handbook of neurotoxicity,” Handb. Neurotox., vol. 1–3, pp. 1–2371, 2014, doi: 10.1007/978-1-4614-5836-4.
+
+[5] P. Muñoz, S. Huenchuguala, I. Paris, and J. Segura-Aguilar, “Dopamine oxidation and autophagy,” Parkinsons. Dis., vol. 2012, 2012, doi: 10.1155/2012/920953.
+
+[6] A. Herrera, P. Muñoz, H. W. M. Steinbusch, and J. Segura-Aguilar, “Are Dopamine Oxidation Metabolites Involved in the Loss of Dopaminergic Neurons in the Nigrostriatal System in Parkinson’s Disease?,” ACS Chem. Neurosci., vol. 8, no. 4, pp. 702–711, 2017, doi: 10.1021/acschemneuro.7b00034.
+
+[7] I. Carballo-Carbajal et al., “Brain tyrosinase overexpression implicates age-dependent neuromelanin production in Parkinson’s disease pathogenesis,” Nat. Commun., vol. 10, no. 1, 2019, doi: 10.1038/s41467-019-08858-y.
+
+[8] D. Sulzer et al., “Neuromelanin detection by magnetic resonance imaging (MRI) and its promise as a biomarker for Parkinson’s disease,” Nature, vol. 4, no. 1. Nature Publishing Group, Dec. 01, 2018, doi: 10.1038/s41531-018-0047-3.
+
+____________________________________________________________________________________________
+
+July 18, 2020
+
+Upon further literature review, it was discovered that there is one known pathway commonly noted in the literature that is connected to both dopaminergic cell death and neuromelanin: dopamine oxidation. Dopamine oxidation is assumed to be a spontaneous process that culminates in neuromelanin formation [9]. Dopamine auto-oxdizes in the cytosol of dopaminergic neurons to form dopamine-o-quinone, and continues to form aminochrome [9-11]. Aminochrome is the most stable quinone formed in this pathway, and has been linked to numerous neurodegenerative mechanisms [9-11], and a mouse model of aminochrome has been able to induce dopaminergic neuron degeneration but not death [12]. Aminochrome then forms 5,6-indolequinone, which has been deteced in neuromelanin granules along with a number of other dopamine oxidation products [9-11]. Dopamine can be prevented from oxidizing in the cytosol by packing it into low pH synaptic vesicles by the action of the VMAT2 enzyme [13]. Presumably, if more dopamine is produced, the oxidation and the resulting neurotoxicity might increase as well. However, no study has been able to induce neurodegeneration or dopaminergic neuron death in rodent models by solely increasing dopamine levels [2], so there may be more involved in this pathway than previously speculated.
+
+References:
+
+[9] A. Herrera, P. Muñoz, H. W. M. Steinbusch, and J. Segura-Aguilar, “Are Dopamine Oxidation Metabolites Involved in the Loss of Dopaminergic Neurons in the Nigrostriatal System in Parkinson’s Disease?,” ACS Chem. Neurosci., vol. 8, no. 4, pp. 702–711, 2017, doi: 10.1021/acschemneuro.7b00034.
+
+[10] J. Segura-Aguilar and I. Paris, “Handbook of neurotoxicity,” Handb. Neurotox., vol. 1–3, pp. 1–2371, 2014, doi: 10.1007/978-1-4614-5836-4.
+
+[11] P. Muñoz, S. Huenchuguala, I. Paris, and J. Segura-Aguilar, “Dopamine oxidation and autophagy,” Parkinsons. Dis., vol. 2012, 2012, doi: 10.1155/2012/920953.
+
+[12] A. Herrera et al., “Aminochrome induces dopaminergic neuronal dysfunction: a new animal model for Parkinson’s disease,” Cell. Mol. Life Sci., 2016, doi: 10.1007/s00018-016-2182-5.
+
+[13] K. M. Lohr and G. W. Miller, “VMAT2 and Parkinson’s disease: harnessing the dopamine vesicle,” NCBI, vol. 14, no. 10, pp. 1115–1117, 2014, doi: 10.1586/14737175.2014.960399.VMAT2.
+
+____________________________________________________________________________________________
+
+July 19, 2020
+
+RESEARCH RATIONALE
+
+Recently, the dopamine oxidation pathway and neuromelanin gave been suggested to contribute to the neurotoxic mechanisms that cause Parkinson’s disease (PD), the second most common neurodegenerative disorder in the world. The goal of this research is to determine the extent of involvement of numerous genes regulating this pathway and to identify new pathways contributing to neuromelanin formation using gene expression data.
+
+____________________________________________________________________________________________
+
+July 20, 2020
+
+Based on a review of literature, the target genes for this study were determined. Although dopamine oxidation itself is assumed to be spontaneous, there are a number of antioxidant pathways that are catalyzed by enzymes and therefore linked to genes and gene expression. These are the genes that have been shown to be involved in the dopamine oxidation pathway in some way.
+
+  - Tyrosine Hydroxylase (TH)
+  - Aromatic L-amino acid decarboxylase (DDC)
+  - Vesicular Monoamine Transporter 2 (SLC18A2)
+  - Dopamine Active Transporter (SLC6A3)
+  - Glutathione S-Transferase Mu 2 (GSTM2)
+  - DT-diaphorase (NQO1)
+  - Monoamine Oxidase A (MAOA)
+  - Monoamine Oxidase B (MAOB)
+  - Catechol-O-methyltransferase (COMT)
+  
+TH and DDC are both involved in dopamine synthesis [2, 9-11]. SLC18A2 (the gene coding for the VMAT2 enzyme), as explained previously, works to pack dopamine into synaptic vesicles to prevent its oxidation [13]. It is important to note that VMAT2 levels have been inversely correlated with neuromelanin levels, and the VMAT2 enzyme has been observed ot be dysfunctional in PD [13]. SLC6A3 codes for the dopamine active transporter, an enzyme which transfers dopamine from extracellular matrix to dopaminergic neuron cytosol [9]. GSTM2 and NQO1 both code for enzymes that are involved in metabolizing aminochrome into non-neurotoxic products, and therefore have been suggested to be neuroprotective against aminochrome [9-11]. MAOA, MAOB, and COMT are involved in two antioxidant pathways that prevent dopamine oxidation by metabolizing dopamine into homovanillic acid [9-11].
+
+It has not been commonly noted in the literature that any of these genes are differentially expressed in the brains of Parkinson's patients and normal people, although one study noted that TH and SLC6A3 are slightly downregulated in the dopaminergic neurons of Parkinson's patient, according to a qRT-PCR analysis [14]. The evidence of this downregulation, however, was weak and contradicted microarray results from the same study which noted no downregulation of those genes, so no clear conclusion could be established.
+
+References: 
+
+[14] F. Simunovic et al., “Gene expression profiling of substantia nigra dopamine neurons: further insights into Parkinson’s disease pathology,” Brain, vol. 132, no. 7, pp. 1795–1809, 2009, doi: 10.1093/brain/awn323.
+
+____________________________________________________________________________________________
+
+July 21, 2020
+
+The objectives were determined. Overall goals of this study include: 
+  
+  1) Age in SN: Analyzing gene expression in substantia nigra of non-neurological people of different ages and Parkinson's patients of different ages
+  2) mDBR (melanized dopaminergic brain region expression analysis): Analyzing gene expression in melanized and non-melanized dopaminergic brain regions of non-neurological people and Parkinson's patients
+  
+This study can be characterized as an observational study, as the data was obtained from available online sources and no treatment was applied to the subjects from which the samples were obtained.
+  
+Preliminary datasets to use for analysis were also collected:
+  
+  1) Age Correlations
+      - Non-neurological individuals: UK Brain Expression Consortium (GSE46706)
+      - Parkinson's patients: GSE8397, GSE20292
+  2) mDBR
+      - Non-neurological individuals (only): Allen Human Brain Atlas
+
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+AGE CORRELATIONS - NON-NEUROLOGICAL INDIVIDUALS
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+July 22, 2020 
+
+  Initially, the SuperSeries GSE46706 was loaded into RStudio using the getGEO() function from the GEOquery package. GSE46706 was generated by UK Brain Expression Consortium, and contains gene expression data in the brain from a large cohort of neurologically and neuropathologically normal individuals. This SuperSeries consists of two platforms, GPL5175 and GPL5188, both consisting of Affymetrix Human Exon 1.0 ST Arrays, and corresponding to SubSeries GSE60862 and GSE60863 respectively. GPL5175 is the transcript (gene) version, and thus GSE60862 contains a gene-level analysis of expression, and GPL5188 is the probe (exon) version, and thus GSE60863 is contains an exon-level analysis. Each SubSeries consists of 1231 samples from 134 Caucasian individuals. It was initially submitted to GEO May 7, 2013, and updated Aug 12, 2019.
+  
+  The arrays from both SubSeries had been pre-processed using RMA quantile normalization with background correction. Therefore, normalization after loading the data would most likely not be necessary.
+  
+  However, the GSE46706 file was too large and uploading it resulted in memory exhaustion. Therefore, it had to be selectively downloaded for only the desired samples. GSE60862 and GSE60863 were loaded in separately, selecting samples GSM1491421 to GSM1492619. These two samples correspond to the first and last substantia nigra samples in the dataset. Although only substantia nigra samples were desired, the dataset did not list the samples in order of brain region. Since the GSElimits argument in the getGEO() function only allows for a vector of length two specifying the sample to start at and the sample to end at, numerous samples were also downloaded that were not from the substantia nigra. Therefore, the data would need to be filtered again for only substantia nigra samples.
+  
+```{r, echo=FALSE}
+library(GEOquery)
+
+# Load in GSE46706, store as large list. This did not work because GSE46706 is too large of a file.
+# gset <- getGEO('GSE46706', GSEMatrix = TRUE)
+
+# Load in select samples from GSE60862, store as large list
+gset_gene <- getGEO('GSE60862', destdir = '/Users/rezaadibnia/Desktop/PD NM Project/GSE46706 data/GSE60862', GSElimits = c('GSM1491421', 'GSM1492619'), GSEMatrix = TRUE)
+
+# Could not load in GSE60863, as it led to memory exhaustion.
+# gset_exon <- getGEO('GSE60863', destdir = '/Users/rezaadibnia/Desktop/PD NM Project/GSE46706 data/GSE60863', GSElimits = c('GSM1491421', 'GSM1492619'), GSEMatrix = TRUE)
+
+```
+
+  Gene expression data from GSE60862 (GPL5157) was read as a numeric matrix (gene), with columns as samples and rows as gene probe sets. Samples were lined with the age of the donor from which the sample was obtained and the brain region of the sample (gene_filt).
+  
+  gene_filt was then filtered for expression data in the substantia nigra (gene_filt_SN), which yielded 101 samples. Since gene_filt was transposed before filtering, gene_filt_SN contained rows as samples (observations) and columns as gene probe sets (variables). Age, as aligned with the substantia nigra samples, was extracted as its own numeric vector called age_gene_SN to use for computing correlations using the cor() and cor.test() functions in the future. While gene_filt_SN, after cleaning up the data frame, only contained the expression data, a copy of gene_filt_SN, gene_filt_SN_with_age, was made that included the age column as well.
+
+```{r, echo=FALSE}
+library(GEOquery)
+library(tidyverse)
+library(stringr)
+
+# to avoid scientific notation
+options(scipen = 999)
+
+########################## PREPARE DATA ##########################
+
+# Gene expression microarray data. Genes are listed using numeric IDs.
+gene <- gset_gene[["GSE60862_series_matrix.txt.gz"]]@assayData[["exprs"]]
+
+# Gives age of donor and brain region for each sample
+gene_sample_annotations <- gset_gene[["GSE60862_series_matrix.txt.gz"]]@phenoData@data
+
+# Names of genes that correspond to each numeric ID
+gene_names <- gset_gene[["GSE60862_series_matrix.txt.gz"]]@featureData@data
+
+# Observe features of data frames
+# head(gene_sample_annotations)
+# head(gene_names)
+
+
+# add age of donor (column 48) and brain region (column 11) for each sample
+gene_filt <- t(gene)
+gene_filt <- gene_filt %>% 
+  cbind(gene_sample_annotations[,11], gene_sample_annotations[,48]) %>% 
+  data.frame()
+
+
+# filter for only substantia nigra (SN) gene expression data
+gene_filt_SN <- gene_filt %>% 
+  filter(V26494 == 'brain region: substantia nigra')
+
+
+# extract age as its own numeric vector
+extract_age_gene <- function(gene_filt_brain_region) {
+  
+  # All data frames filtered for brain region have same genes (columns), therefore $V26495 works for all filtered data frames
+  age_gene <- as.numeric(gene_filt_brain_region$V26495)
+  
+  return(age_gene)
+  
+}
+
+age_gene_SN <- extract_age_gene(gene_filt_SN)
+
+# Creates a numeric data frame version of the inputted data frame
+# All expression values must be converted to numeric, because using cbind() on gene_filt converts them all to character values
+convert_to_numeric <- function(gene_expression_dataframe) {
+  
+  df <- matrix(data = NA, nrow = dim(gene_expression_dataframe)[1], ncol =
+                 dim(gene_expression_dataframe)[2])
+  
+  for (i in 1:dim(gene_expression_dataframe)[2]) {
+    df[,i] <- c(as.numeric(gene_expression_dataframe[,i]))
+  }
+  
+  rownames(df) <- row.names(gene_expression_dataframe)
+  colnames(df) <- colnames(gene_expression_dataframe)
+  
+  return(df)
+}
+
+# Call convert_to_numeric function, with parameter being gene_filt_SN without the brain region and age columns
+gene_filt_SN <- convert_to_numeric(gene_filt_SN[,-c(26494,26495)])
+gene_filt_SN_with_age <- cbind.data.frame(gene_filt_SN, age_gene_SN)
+
+
+```
+
+  After exploring the gene_names data frame, it appeared that there were two different probe sets corresponding to the DDC gene (3001557 and 3050388), and two different probe sets both corresponding to the MAOA gene (3975227 and 4055661). For each gene, the probe set with the greatest variance across all SN samples was chosen [15]. For DDC the ID chosen was 3050388, and for MAOA the ID chosen was 4055661.
+  
+  Target Gene IDs:
+  
+  - TH - 3359180
+  - DDC - 3050388
+  - SLC18A2 - 3266279
+  - SLC6A3 - 2845921
+  - GSTM2 - 2350952
+  - NQO1 - 3696666
+  - MAOA - 4055661
+  - MAOB - 4006210
+  - COMT - 3937092
+  
+  After determining the appropriate probe set IDs to use for each target gene, the expression data of the target genes in the substantia nigra was gathered into one data frame called target_gene_expression_SN, in case such a data frame would be useful in the future. However, it is important to note that this data frame was formed using the gather() function from dplyr, meaning it was formatted such that each row corresponded to the expression value for a specific gene in a specific sample.
+
+```{r}
+library(hash)
+
+# select probe sets for DDC and MAOA based on variance
+
+# DDC
+var(gene_filt_SN[,"X3001557"])
+var(gene_filt_SN[,"X3050388"]) # greater variance
+
+# MAOA
+var(gene_filt_SN[,"X3975227"])
+var(gene_filt_SN[,"X4055661"]) # greater variance
+
+
+########################## GATHER TARGET GENE EXPRESSION DATA ########################## 
+
+# keys as gene IDs and values as gene names
+target_gene_IDs_to_names <- hash(c('X3359180', 'X3050388', 
+                                   'X3266279', 'X2845921', 
+                                   'X2350952', 'X3696666', 
+                                   'X4055661', 'X4006210', 'X3937092'), 
+                                 c('TH', 'DDC', 
+                                   'SLC18A2', 'SLC6A3', 
+                                   'GSTM2', 'NQO1',
+                                   'MAOA',
+                                   'MAOB', 'COMT'))
+
+# gathering expression data for all target genes in a certain brain region into 1 data frame
+target_genes_only <- function(gene_filt_brain_region) {
+  
+  gene_filt_brain_region <- data.frame(gene_filt_brain_region)
+  target_gene_expression <- gene_filt_brain_region %>% 
+    select('X3359180', 'X3050388', 'X3266279', 'X2845921', 'X2350952', 'X3696666', 'X4055661', 'X4006210', 'X3937092') %>%
+    gather(key = 'Gene', value = 'Expression', na.rm = TRUE)
+
+  # convert all gene IDs in target_gene_expression to gene names
+  for (i in 1:dim(target_gene_expression)[1]) {
+    target_gene_expression[i,1] <- target_gene_IDs_to_names[[target_gene_expression[i,1]]]
+  }
+  
+  return(target_gene_expression)
+}
+
+target_gene_expression_SN <- target_genes_only(gene_filt_SN)
+
+
+```
+
+References: 
+
+[15] A. Keo et al., “Transcriptomic signatures of brain regional vulnerability to Parkinson’s disease,” Commun. Biol., vol. 3, no. 1, pp. 1–12, 2020, doi: 10.1038/s42003-020-0804-9.
+
+____________________________________________________________________________________________
+
+July 23, 2020
+
+  Exploratory analysis of gene_filt_SN was performed. A boxplot of all 101 samples (columns) revealed that the data was relatively median-centered. This is reasonable, since it was indicated on the page of each sample that the arrays were pre-processed using RMA quantile normalization with background correction. If any of the boxplots deviated significantly than the others, this could have indicated that the fluorescence for that sample was either systematically higher or lower than for others, causing the reads for it to be erroneously higher or lower than for others. In such cases, quantile normalization would be necessary. However, as the data was relatively median-centered, the data did not need to be normalized. This is reasonable since the study from which the data was obtained did note that RMA normalization with background correction had been performed on the data before it was submitted to GEO. Additionally, the histogram showed that the data was roughly symmetric, indicating that Pearson's correlations could be applied to the data. 
+
+```{r}
+library(dplyr)
+library(preprocessCore)
+
+# SN gene expression data does appear relatively median-centered, therefore normalization is not necessary. t(gene_filt_SN) makes the boxplot display the distributions of gene expression values for all the genes across all samples.
+gene_filt_SN %>% t %>% boxplot
+
+# Quantile normalized
+gene_filt_SN %>% 
+  t %>% 
+  normalize.quantiles %>% 
+  boxplot
+
+gene_filt_SN %>% 
+  t %>% 
+  hist(main = 'Histogram of Substantia Nigra Gene Expression Data', xlab = 'Expression')
+# gene_filt_SN %>% t %>% as.matrix %>% normalize.quantiles %>% hist(main = 'Histogram of normalized Substantia Nigra Gene Expression Data', xlab = 'Expression')
+
+# # log2 transform of gene_filt_SN
+# gene_filt_SN_log2 <- log2(gene_filt_SN)
+# 
+# boxplot(t(gene_filt_SN_log2))
+# gene_filt_SN_log2 %>% t %>% as.matrix %>% normalize.quantiles %>% boxplot
+# 
+# hist(gene_filt_SN_log2, main = 'Histogram of log2-transformed Substantia Nigra Gene Expression Data', xlab = 'Expression')
+# gene_filt_SN_log2 %>% t %>% as.matrix %>% normalize.quantiles %>% hist(main = 'Histogram of normalized, log2-transformed Substantia Nigra Gene Expression Data', xlab = 'Expression')
+# 
+# rm(gene_filt_SN_log2)
+
+```
+
+  It is apparent that neither quantile normalization nor logarithmic transformations are necessary, as the raw expression data is median-centered and roughly symmetric. The log2 transformation only makes the data more left-skewed. Therefore, the raw data frame gene_filt_SN will be used for further analyses.
+  
+  From the first boxplot, we can also see that there are many more high outliers in the data than low outliers. This means there are many more gene with very high expression in the substantia nigra than genes with very low expression in the substantia nigra.
+
+  Additionally, the age data (age_gene_SN) needed to be checked to ensure that it matched a normal distribution. Using a significance level of α = 0.05, a Shapiro-Wilk normality test gave a p-value of 0.1511, indicating that the data was not significantly different from a normal distribution. To further confirm that age_gene_SN matched a normal distribution, a histogram of age_gene_SN was computed, and it showed that the data was roughly symmetric. A normality plot (or quantile-quantile plot) also showed negligible deviation from a normal distribution, as the correlation between the age data and a normal distribution appeared strong with few outliers from the trend.
+
+```{r}
+library(ggpubr)
+
+shapiro.test(age_gene_SN)
+
+hist(age_gene_SN, main = 'Histogram of Patient Ages', xlab = 'Age of Patient')
+
+ggqqplot(age_gene_SN, ylab = 'Patient Ages')
+
+```
+____________________________________________________________________________________________
+
+July 24, 2020
+
+  Downstream analysis of gene_filt_SN was performed. A correlation matrix of the target genes and the age of the samples was computed using the rcorr() function from the Hmisc package. Unfortunately, the original target_gene_expression_SN data frame, which was created using the gather() function, would not be useful in this case. The target_gene_expression_SN data frame was redefined to contain the columns has samples at nine rows, each row corresponding to a different target gene. The correlation matrix showed both correlations between target gene expression in the substantia nigra and patient age, and correlations between the expression of different target genes with each other to determine their interconnectedness. The rcorr() function also outputted a matrix of the p-values of correlation. The output of this function was stored in the list cor_matrix_target_SN. The correlation matrix was also visualized using the corrplot() function from the corrplot package, with insignificant correlations (p > 0.05) left blank.
+
+```{r}
+library(Hmisc)
+library(corrplot)
+
+# list of gene IDs of target genes
+target_genes = c('X3359180', 'X3050388', 'X3266279', 'X2845921', 'X2350952', 'X3696666', 'X4055661', 'X4006210', 'X3937092')
+
+target_gene_expression_SN <- matrix(data = NA, nrow = length(target_genes), ncol = dim(gene_filt_SN)[1])
+target_gene_expression_SN <- data.frame(target_gene_expression_SN)
+
+for (i in 1:length(target_genes)) {
+  df <- gene_filt_SN %>% 
+    t %>% 
+    data.frame %>% 
+    filter(rownames(data.frame(t(gene_filt_SN))) == as.character(target_genes[i]))
+  target_gene_expression_SN[i,] <- df
+}
+
+colnames(target_gene_expression_SN) <- rownames(gene_filt_SN)
+rownames(target_gene_expression_SN) <- target_genes
+
+for (i in 1:length(rownames(target_gene_expression_SN))) {
+  rownames(target_gene_expression_SN)[i] <- target_gene_IDs_to_names[[rownames(target_gene_expression_SN)[i]]]
+}
+
+target_gene_expression_SN <- target_gene_expression_SN %>% add_row()
+target_gene_expression_SN[10,] <- age_gene_SN
+rownames(target_gene_expression_SN)[10] <- "age"
+
+# Correlation matrix of target genes with raw numbers
+cor_matrix_target_SN <- target_gene_expression_SN %>% t %>% as.matrix %>% rcorr
+cor_matrix_target_SN
+
+# Visualization of correlation matrix, with insignificant correlations left blank
+corrplot(cor_matrix_target_SN$r, type="upper", order="hclust", 
+         p.mat = cor_matrix_target_SN$P, sig.level = 0.05, insig = "blank")
+
+```
+
+  From these correlation matrix, it can be observed that most target genes, except SLC18A2, SLC6A3, MAOA, and MAOB, are significantly correlated with age using a significance level α = 0.05. NQO1 has the greatest |r| of all the target genes, with r = -0.29 and p = 0.0029. The genes TH, DDC, SLC18A2, and SLC6A3 were highly correlated with each other (r > 0.90), which is reasonable since they are all directly involved in dopamine synthesis. The other genes did have some significant correlations with each other, though none had correlation coefficients as large as those between TH, DDC, SLC18A2, and SLC6A3.
+
+____________________________________________________________________________________________
+
+July 25, 2020
+
+  Correlation coefficients and p-values of correlation were extracted from the correlation matrix for future reference.
+  
+```{r}
+
+# Extract correlation coefficients
+r_age_corr_target <- cor_matrix_target_SN$r
+
+# Extract p-values
+raw_p_age_corr_target <- cor_matrix_target_SN$P
+
+```
+
+  Additionally, all the probe sets were aligned to individual genes in the data frame gene_filt_SN according to the procedure below, which matches procedures previously used in the literature [15]. This would allow for performing age correlations for all the genes. Probe sets that were not assigned to a gene were removed.
+  
+  - If there is only one probe set for a gene, that one is chosen
+  - If there are two probe sets for one gene, the one with the max variance across all samples is chosen (method = maxRowVariance)
+  - If there more than two probe sets for one gene, the probe set with the highest connectivity (summed adjacency) is chosen (connectivityBasedCollapsing = TRUE)
+
+```{r}
+library(dplyr)
+library(WGCNA)
+
+gene_filt_SN <- gene_filt_SN %>% t %>% data.frame
+gene_filt_SN$probe_set_ID <- gene_names[, "ID"]
+gene_filt_SN$gene_assignment <- gene_names[, "gene_assignment"]
+
+# Remove probe sets not assigned to a gene first
+probesets_missing_gene <- gene_filt_SN$gene_assignment == "---"
+print(paste(sum(probesets_missing_gene), "probe sets without gene assignments"))
+gene_filt_SN <- gene_filt_SN %>% filter(gene_filt_SN$gene_assignment != "---")
+
+
+# Align probe sets to genes
+for (i in 1:dim(gene_filt_SN)[1]) {
+  gene_filt_SN[i,  "gene_assignment"] <- strsplit(gene_filt_SN[i, "gene_assignment"], " ")[[1]][3]
+}
+rownames(gene_filt_SN) <- gene_filt_SN$probe_set_ID
+probe2gene_UKBEC <- collapseRows(gene_filt_SN[, -103],
+                           rowGroup = gene_filt_SN$gene_assignment,
+                           rowID = gene_filt_SN$probe_set_ID,
+                           method = "maxRowVariance",
+                           connectivityBasedCollapsing = TRUE)
+gene_filt_SN <- probe2gene_UKBEC[["datETcollapsed"]] %>% data.frame
+print(paste(dim(gene_filt_SN)[1], "genes were aligned to 24882 probe sets in the UKBEC data"))
+
+
+```
+
+____________________________________________________________________________________________
+
+July 26, 2020
+
+  It is possible that the target genes may not be only genes involved in neuromelanin formation and/or dopamine oxidation noted in literature; there may be genes involved in these processes that are not noted in literature. Therefore, correlations were computed for all the genes, and the p-values of correlation were adjusted using the same method used for the target genes. The goal of this was to identify which genes did change in expression with age, and then later determine whether they have some relationship to neuromelanin formation or the dopamine oxidation pathway, either based on further literature review or melanized dopaminergic brain region (mDBR) differential expression analysis.
+  
+```{r}
+library(dplyr)
+
+# Create a data frame that will store correlation coefficients and p values for each gene 
+all_age_correlations <- matrix(nrow = dim(gene_filt_SN)[1], ncol = 5) %>% data.frame
+rownames(all_age_correlations) <- gene_filt_SN$probe_set_ID
+all_age_correlations[,1] <- rownames(gene_filt_SN)
+all_age_correlations[,2] <- gene_filt_SN$probe_set_ID
+colnames(all_age_correlations) <- c("Gene", "ID", "Correlation Coefficient", "Raw p-value", "BH-corrected p-value")
+
+# Compute age correlations for all genes and store raw p-values and correlation coefficients
+for (i in 1:dim(gene_filt_SN)[1]) {
+  
+  cor <- cor.test(as.numeric(gene_filt_SN[i, 1:101]), age_gene_SN, method = "pearson")
+  all_age_correlations[i, "Correlation Coefficient"] <- cor[["estimate"]][["cor"]]
+  all_age_correlations[i, "Raw p-value"] <- cor[["p.value"]]
+  
+}
+
+```
+
+____________________________________________________________________________________________
+
+July 27, 2020
+
+  To minimize the false discovery rate of significant correlations, the Benjamini-Hochberg (BH) procedure was applied to all the p-values using the p.adjust() function.
+  
+```{r}
+library(dplyr)
+
+# Adjust p-values using Benjamini-Hochberg (BH) procedure
+all_age_correlations[, "BH-corrected p-value"] <- p.adjust(all_age_correlations[, "Raw p-value"], 
+                                                           method = "BH")
+
+# Filter for target genes
+target_genes <- c(3359180, 3050388, 3266279, 2845921, 2350952, 3696666, 4055661, 4006210, 3937092)
+age_cor_target <- all_age_correlations %>% 
+  filter(all_age_correlations$ID %in% target_genes)
+
+```
+
+____________________________________________________________________________________________
+
+July 29, 2020
+
+  After adjusting p-values, it was evident that none of the target genes were actually significantly correlated with age. Even for NQO1, the most significantly correlated target gene, had p = 0.06190312 > 0.05. However, filtering for genes that are significantly correlated with age may reveal some information about biological pathways that are altered with age upon future enrichment analysis. Therefore, as stated in the procedure, the age correlations of all genes were filtered for the top 10% of genes with the highest correlation coefficients and the bottom 10% of genes with the lowest correlation coefficients, given that their BH-corrected p-values < 0.05. These genes are called ACGs (age-correlated genes).
+  
+```{r}
+library(dplyr)
+
+# Filter for genes significantly correlated with age
+sig_age_correlations <- all_age_correlations %>% 
+  filter(all_age_correlations[, "BH-corrected p-value"] < 0.05)
+
+# Filter for genes with positive correlation coefficient
+pos_sig_age_correlations <- sig_age_correlations %>% 
+  filter(sig_age_correlations[, "Correlation Coefficient"] > 0)
+write.csv(x=pos_sig_age_correlations, file="pos_sig_age_correlations.csv") # Writes csv file, saves to working directory to allow for simpler gene set enrichment analysis
+print(paste(dim(pos_sig_age_correlations)[1], "genes were upregulated with age"))
+
+# Filter for genes with negative correlation coefficient
+neg_sig_age_correlations <- sig_age_correlations %>% 
+  filter(sig_age_correlations[, "Correlation Coefficient"] < 0)
+write.csv(x=neg_sig_age_correlations, file="neg_sig_age_correlations.csv") # Writes csv file, saves to working directory to allow for simpler gene set enrichment analysis
+print(paste(dim(neg_sig_age_correlations)[1], "genes were downregulated with age"))
+
+# Filter top 10% of positively correlated genes
+top_pos_sig_age_correlations <- pos_sig_age_correlations %>% 
+  filter(pos_sig_age_correlations[, "Correlation Coefficient"] > quantile(pos_sig_age_correlations[, "Correlation Coefficient"], 0.9))
+
+# Filter bottom 10% of negatively correlated genes
+top_neg_sig_age_correlations <- neg_sig_age_correlations %>% 
+  filter(neg_sig_age_correlations[, "Correlation Coefficient"] < quantile(neg_sig_age_correlations[, "Correlation Coefficient"], 0.1))
+
+# Recombine data frame
+ACGs <- bind_rows(top_pos_sig_age_correlations, top_neg_sig_age_correlations)
+write.csv(x=ACGs, file="ACGs.csv") # Writes csv file of ACGs, saves to working directory to allow for simpler gene set enrichment analysis
+print(paste(dim(ACGs)[1], "age-correlated genes (ACGs)"))
+
+```
+
+____________________________________________________________________________________________
+
+July 31, 2020
+
+  A volcano plot of age correlations was constructed to better visualize the results. This included the -log(p-value of correlation) on the y-axis and the correlation coefficient on the x-axis. Positively correlated ACGs are blue, negatively correlated ACGs are red, and genes not significantly correlated with age are in .
+```{r}
+library(ggplot2)
+library(dplyr)
+
+volcano_plot_df <- data.frame(all_age_correlations)
+
+# Threshold values for fold change
+horz_min_age = (sig_age_correlations %>% filter(sig_age_correlations[, "Correlation Coefficient"] < 0) %>% data.frame)[, "Correlation.Coefficient"] %>% quantile(0.10)
+horz_max_age = (sig_age_correlations %>% filter(sig_age_correlations[, "Correlation Coefficient"] > 0) %>% data.frame)[, "Correlation.Coefficient"] %>% quantile(0.90)
+
+# Add a column indicating whether probe is upregulated, downregulated, or not significant
+volcano_plot_df$differentially_expressed <- "Not Significant"
+
+# If log2Foldchange > horz_max and pvalue < 0.05, set as "Upregulated" 
+volcano_plot_df$differentially_expressed[volcano_plot_df$Correlation.Coefficient > horz_max_age & volcano_plot_df$BH.corrected.p.value < 0.05] <- "Upregulated"
+
+# If log2Foldchange < horz_min and pvalue < 0.05, set as "Downregulated"
+volcano_plot_df$differentially_expressed[volcano_plot_df$Correlation.Coefficient < horz_min_age & volcano_plot_df$BH.corrected.p.value < 0.05] <- "Downregulated"
+
+# Set the theme
+theme <- theme(panel.background = element_blank(),
+               axis.line = element_line(colour = "black"),
+               axis.title =  element_text(size = 15),
+               plot.title = element_text(size = 16, face = "bold"))
+
+# Create the plot
+volcano_plot_age <- ggplot(data=volcano_plot_df, 
+                            aes(Correlation.Coefficient, 
+                                -log10(BH.corrected.p.value), 
+                                col=differentially_expressed)) +
+                    geom_point(size = 1) +
+                    scale_colour_manual(values = c("Not Significant"="grey", 
+                                                   "Downregulated"="red", 
+                                                   "Upregulated"="blue")) +
+                    labs(x = bquote("Correlation with Age ("*italic(r)*")"), 
+                         y = bquote("-"*log[10]*" "*italic(P)*"-value")) +
+                    ggtitle("Age Correlations") +
+                    theme
+
+volcano_plot_age
+
+```
+  
+  The volcano plot appears oddly parabolic, suggesting that there is a strong relationship between the p-value of correlation for a certain gene and its correlation coefficient.
+
+____________________________________________________________________________________________
+
+August 1, 2020
+
+  Gene set enrichment analysis was performed for the 77 ACGs, the 123 genes significantly upregulated with age and the 634 genes significantly dowregulated with age separately. These gene sets were inputted into the PANTHER classification system for gene ontology (GO) enrichment analysis.  The goal of this was to identify the GO terms associated with biological processes for which each gene set is enriched using Fischer's exact test with false discovery rate calculation (search for "biological process"). A search was also done for enrichment of cellular components (search for "cellular components" in PANTHER database). Results in PANTHER classification system were deemed significant if the false discovery rate (FDR) p-value < 0.05. These gene sets were also inputted into the STRING database to determine how their proteins interact. While STRING DB does also provide GO enrichment analysis, PANTHER DB allows for the input of more genes, therefore GO results from PANTHER DB were preferred. The results of this analysis are listed below:
+  
+PANTHER DB:
+
+  ACGs: 
+    - No statistically significant results for biological process search 
+    - Cellular component search:
+      - Very high fold enrichment for astrocyte end-foot (fold enrichment > 100, FDR p = 0.0141) and astrocyte projection (fold enrichment = 43.91, FDR p = 0.0315)
+      - Enriched for mitochondrial membrane component GO terms as well (mitochondrial membrane, fold enrichment = 4.18, FDR p = 0.0457)
+      
+  Positively correlated genes: 
+    - No statistically significant results for both biological process search and cellular component search
+    
+  Negatively correlated genes:
+     - Biological process search:
+      - Relaxation of vascular associated smooth muscle (fold enrichment = 19.91, FDR p = 0.0373)
+        - Unrelated to Parkinson's disease
+      - Mitochondrial electron transport, NADH to ubiquinone (fold enrichment = 7.82, FDR p = 0.000672)
+        - Includes oxidative phosphorylation (fold enrichment = 4.94, FDR p = 0.000345)
+        - Biological process also noted to be dysfunctional in PD
+      - Epithelial cilium movement involved in extracellular fluid movement	(fold enrichment = 7.62, FDR p = 0.0241) 
+      - mitochondrial respiratory chain complex I assembly	(fold enrichment = 6.34, FDR p = 0.00111)
+        - NADH dehydrogenase complex assembly	(fold enrichment = 6.34, FDR p = 0.00116)
+      - protein targeting to peroxisome	(fold enrichment = 5.66, FDR p = 0.00121)
+      - cellular aldehyde metabolic process	(fold enrichment = 5.50, FDR p = 0.0236)
+      - fatty acid beta-oxidation	(fold enrichment = 5.32, FDR p = 0.0285)
+      - acyl-CoA metabolic process	(fold enrichment = 3.99, FDR p = 0.0432)
+      - extrinsic apoptotic signaling pathway	(fold enrichment = 3.91, FDR p = 0.0461)
+      - cellular amino acid catabolic process	(fold enrichment = 3.65, FDR p = 0.0315)
+      - translational elongation	(fold enrichment = 3.62, FDR p = 0.0324)
+      - nucleus organization	(fold enrichment = 3.46, FDR p = 0.0413)
+      - organic hydroxy compound metabolic process	(fold enrichment = 2.24, FDR p = 0.0183)
+      - cellular response to stress	(fold enrichment = 1.63, FDR p = 0.00809)
+      - detection of chemical stimulus involved in sensory perception of smell	(fold enrichment < 0.01, FDR p = 0.00273)
+    - Cellular component search:
+      - Astrocyte projection	(fold enrichment = 9.96, FDR p = 0.00435)
+        - Glial cell projection	(fold enrichment = 6.97, FDR p = 0.00700)
+      - Mitochondrial respiratory chain complex I	(fold enrichment = 7.67, FDR p = 0.0000592)
+      - Peroxisomal matrix	(fold enrichment = 5.07, FDR p = 0.0160)
+      - Peroxisomal membrane	(fold enrichment = 4.22, FDR p = 0.0456)
+      - Mitochondrial matrix	(fold enrichment = 3.05, FDR p = 0.000000178)
+      - Extracellular exosome	(fold enrichment = 1.74, FDR p = 0.00000467)
+      - Cytosol	(fold enrichment = 1.38, FDR p = 0.0000277)
+        - The fact that these genes were also enriched for presence in the cytosol is further link to both neuromelanin formation and dopamine oxidation
+      - By far the most interesting result was the enrichment of the melansome (fold enrichment = 3.95, FDR p = 0.00593)
+        - Pigment granule	(fold enrichment = 3.95, FDR p = 0.00578)
+          - Vesicle	(fold enrichment = 1.38, FDR p = 0.00164)
+        - This is directly connected to neuromelanin formation
+        - 12 genes were found to be part of the melanosome and pigment granule GO terms: OCA2, CD63, HSP90AA1, GNA13, PRDX1, CCT4, RAB9A, DTNBP1, HSP90B1, SLC1A4, YWHAZ, NMB
+          - The results indicate that the downregulation of these 12 genes contribute to the age-dependent accumulation of neuromelanin
+          
+STRING DB:
+
+  ACGs: 69 proteins could be mapped to the inputted 77 ACGs
+    - Set to medium confidence (0.400)
+    - RPS2 and RPS20 appeared to be the center of protein hubs, having connections to five other genes, both of which are highly associated with each other (interaction score = 0.999)
+    - Overall, the vast majority of proteins appeared to have no connections to each other, save for a few such as COX7C, COX4I1, UQCR11, NDUFS3, and PTPMT1, which interact with each other and are all relate to mitochondrial respiratory or electron transport chains, as COX7C, COX4I1, are subunits of cytochrome c
+    - No notable enrichments of GO terms different from those already determined from PANTHER DB analysis
+    
+  Positively correlated genes: 97 proteins could be mapped to the inputted 123 genes
+    - Set to medium confidence (0.400) 
+    - SNAI2 and MECOM have a very strong interaction score
+      - MECOM interacts with MYH11, which is another hub center connecting to MYOCD, TAGLN, MYL9, TBX18, and PDGFRB
+      - SNAI2 interacts with NOTCH4 and NOTCH3, which have a high interaction score with each other, as well as some other weaker interactions with DAXX and CAV1
+    - Overall, the vast majority of proteins appeared to have no connections to each other
+    - No notable enrichments of GO terms different from those already determined from PANTHER DB analysis
+    
+  Negatively correlated genes: 606 proteins could be mapped to the inputted 634 genes
+    - This network was incredibly large, so only edges with the highest confidence (0.900) were shown to better observe the clusters
+      - A number of clusters of proteins, all with highest confidence interactions with each other, were observed:
+        - One cluster around the NDUF proteins (NDUFA1, NDUFA13, NDUFA6, NDUFA8, NDUFB10, NDUFB2, NDUFB6, NDUFB7, NDUFB8, NDUFS3, NDUFS6), that includes connections to COX7C and COX4I1
+          - Cluster revolves around dehydrogenases; NDUF proteins are NADH dehydrogenase (ubiquinone) subunits, connected to subunits of cytochrome c oxidase (COX7C, COX4I1, UQCR11, COXA6) as well as subunits of succinate dehydrogenase cytochrome b (SDHD, SDHC)
+        - One cluster around the MRPL proteins (mitochondrial ribosomal proteins)
+        - One cluster around RPS2, RPS20, RPS3, and RPLP2, that also has connections to the MRPL cluster (ribosomal proteins, connected to many transcription factors)
+        - One very closely knit cluster including PRPF, CD2B, SNRPD3, PUF60, GPKOW, SNRNP27, LSM4, LSM8, LSM5 and HNRNPH2 (transcription factors or parts of the spliceosome)
+        - TRIM28 had interactions with all the zinc finger proteins in this set, none of which had any interactions with each other
+        - EGLN3, UBB, PSMC3, PSMA7, and PSMB7 were closely knit, and appeared to be the center of another protein hub
+        - One relatively small protein cluster around the ALDH proteins (ALDH2, ALDH3A2, ALDH61, ALDH9A1, ALDH1A3, subunits of aldehyde dehydrogenase)
+        - One cluster around HIST (HIST1H3D, HIST1H3J, HIST1H4B, HIST1H4D, HIST2H2AB, and HIST4H4) and FBX proteins
+        - CCT4 appeared to be a hub center, connecting to the HIST/FBX cluster, the RPS cluster, and numerous other proteins
+          - CCT4 is T-complex protein 1 (called CCT) subunit delta
+          - Associated with sensory peripheral neuropathy and hereditary sensory neuropathy
+          - Substrates of CCT include the cytoskeletal proteins actin and tubulin
+      - A large number of the proteins (at least half) appeared to have no connections to each other
+      - Using highest confidence, none of the melanosome- or pigment granule-related proteins showed any level of interactions with each other
+      - No notable enrichments of GO terms different from those already determined from PANTHER DB analysis, other than enrichment for glial cell proliferation (SOX11, NF2, EEF2, IL33)
+    
+  Considering the significance of the melanosome/pigment granule GO term and the 12 genes enriched for it, these 12 genes were inputted into STRING DB as well:
+    - RAB9A, GNA13, SLC1A4, and NMB showed no connections with any other proteins
+    - OCA2 and DTNBP1 had an edge with medium confidence (0.400)
+    - HSP90AA1 appeared to be a network hub, having edges of medium confidence with PRDX1, CD63, and YWHAZ, and edges of highest confidence (0.900) with CCT4 and HSP90B1
+      - HSP90AA1 may be a reliable protein/gene target for preventing high levels of neuromelanin accumulation, and therefore preventing the development of Parkinson's disease in older individuals
+    - GO term enrichment anlaysis provided by STRING DB verified that these 12 genes are highly involved in the melanosome
+      - Enriched for pigment cell differentation (OCA2, CD63) and cellular pigmentation (CD63, DTNBP1) biological processes, and the melanosome (all except NMB) and melanosome membrane (OCA2, DTNBP1) cellular components
+    
+  The clusters of transcription factors, particularly for negatively correlated genes such as TRIM28, as well as histone modifying proteins like HIST1H3D, HIST1H3J, HIST1H4B, HIST1H4D, HIST2H2AB, and HIST4H4, suggests that an epigenomic analysis the changes to the genome with age could reveal interesting changes to genes regulated by those transcription factors. Additionally, HSP90AA1 may be a reliable protein target for preventing high levels of neuromelanin accumulation, and therefore preventing the development of Parkinson's disease in older individuals, because of its interconnectedness to other melanosome/pigment granule-related proteins that are downregulated with age.
+
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+AGE CORRELATIONS - NON-NEUROLOGICAL INDIVIDUALS EXON-LEVEL ANALYSIS
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+The following code was written to allow for an exon-level correlation analysis of gene expression with age. It can only be run if GSE46706 can be loaded into RStudio as the list called gset without memory exhaustion as written in the first code chunk of this notebook.
+
+August 8, 2020
+
+  Exon microarray data from GSE46706 (GPL517) was read into a numeric matrix (exon), with columns as samples and rows as exon probes. Samples were lined with the age of the donor from which the sample was obtained and the brain region of the sample, to form the data frame exon_filt. Each exon was then aligned to a specific transcript cluster ID within the exon_filt data frame. This would allow for filtering the exons based on their corresponding gene, as each transcript cluster ID corresponded to one gene (this means multiple exons, or columns, in exon_filt could have the same transcript cluster ID).
+  
+  exon_filt was then filtered for expression data in the substantia nigra, the output of which was stored in the data frame exon_filt_SN. As rbind() and cbind() had been used to add brain regions, age of patient, transcript cluster IDs, and the type of exon to exon_filt, the expression values of exon_filt were coerced into the character data. Because exon_filt was filtered to make exon_filt_SN, the expression values of exon_filt_SN were also character values. The expression values in exon_filt_SN were converted to numeric and stored in a new data frame called exon_filt_SN_numeric. In the end, both exon_filt_SN and exon_filt_SN_numeric contained the rows as different samples and columns as different exons. They both also contained a row at the bottom that contained the transcript cluster IDs for each column (i.e., exon), and exon_filt_SN had two columns at the end, one indicating the brain region of each sample (which was all substantia nigra), and another indicating the age of the patient sample.
+  
+  Age, as aligned with the substantia nigra samples in exon_filt_SN, was extracted as its own numeric vector age_exon to use for computing correlations using the cor() and cor.test() functions.
+
+```{r, echo=FALSE}
+library(GEOquery)
+library(dplyr)
+library(stringr)
+
+# to avoid scientific notation
+options(scipen = 999)
+
+# Exon expression microarray data. Exon are listed using numeric transcript cluster IDs.
+exon <- gset[["GSE46706-GPL5188_series_matrix.txt.gz"]]@assayData[["exprs"]]
+# Gives age of donor and brain region for each sample
+exon_sample_annotations <- gset[["GSE46706-GPL5188_series_matrix.txt.gz"]]@phenoData@data
+# Shows names of genes that correspond to each numeric ID
+exon_names <- gset[["GSE46706-GPL5188_series_matrix.txt.gz"]]@featureData@data
+
+# Add transcript cluster IDs, sample ages, sample brain regions
+exon_filt <- exon
+# Add sample ages and brain regions as two extra rows at bottom of exon_filt
+exon_filt <- exon_filt %>% rbind(exon_sample_annotations[,11], exon_sample_annotations[,46])
+# Add exon transcript cluster IDs as extra column at end of exon_filt
+exon_filt <- exon_filt %>% cbind(exon_names[,10], exon_names[,15]) #provides a warning that doesn't matter. exon_names[,15] adds label of core/extended/full exons 
+colnames(exon_filt)[1232] <- 'Transcript Cluster ID'
+# Put 'brain region: substantia nigra' in Transcript Cluster ID column so that it includes the transcript cluster ID row after it is filtered
+exon_filt[291705,1232] <- 'brain region: substantia nigra'
+exon_filt[291706,1232] <- NA
+
+
+# Filter exon_filt for substantia nigra samples only
+exon_filt <- data.frame(t(exon_filt)) #rows as samples, columns as exons, to filter for samples in the substantia nigra
+exon_filt_SN <- exon_filt %>% filter(exon_filt[,291705] == 'brain region: substantia nigra')
+
+# Change column labels for exon_filt to avoid confusion in future reference
+colnames(exon_filt)[291706] = 'age'
+colnames(exon_filt)[291705] = 'brain_region'
+row.names(exon_filt)[1233] = 'exon_type'
+
+# At these two positions, the exon type repeats
+exon_filt[1233,291705] <- NA
+exon_filt[1233,291706] <- NA
+
+# Extract age as its own numeric vector
+age_exon <- exon_filt_SN[,291706]
+age_exon <- as.numeric(age_exon[-102])
+
+# Convert all applicable values in exon_filt_SN to numeric using convert_to_numeric function that was previously defined
+exon_filt_SN_numeric <- convert_to_numeric(exon_filt_SN[,c(-291705,-291706)])
+
+# Print first 100 exons
+head(exon_filt_SN_numeric[,1:100])
+
+```
+
+  Before downstream analysis could be performed, the exploratory analysis needed to be performed to determine whether normalization would be necessary or not. A boxplot of the exon expression values in each of the 101 samples revealed that the data was relatively median-centered, indicating that quantile normalization was not necessary. A comparison of this boxplot and a boxplot with the quantile normalized exon expression values also supports this claim.
+```{r, echo=FALSE}
+library(preprocessCore)
+
+# Data does appear median centered
+boxplot(t(exon_filt_SN_numeric[-102,]))
+
+# Quantile normalizing the exon data and making a boxplot for comparison with original data
+boxplot(normalize.quantiles(as.matrix(t(exon_filt_SN_numeric[-102,]))))
+
+```
+  Additionally, looking at a histogram of exon expression, it can be observed that exon expression across all samples is roughly symmetric and therefore approximately normal, indicating that Pearson's correlations can be applied.
+  
+```{r}
+library(dplyr)
+
+exon_filt_SN_numeric[-102,] %>% 
+  hist(main = 'Exon Expression', xlab = 'Exon Expression')
+
+```
+  
+  The exploratory analysis did reveal that there were many more high outliers than low outliers, which means that exons are generally more likely to be overexpressed than underexpressed in the substantia nigra. This trend was even more prevalent than in the gene expression data, as the exon expression data had almost no low outliers.
+
+  At this point, the data was ready for downstream analysis. This would consist of computing correlations between exon expression and age of the sample donor.
+
+____________________________________________________________________________________________
+
+August 9, 2020
+
+  Correlations analysis tests were performed for all target genes, computing the correlation between exon expression and the age of the sample donor. The format was as follows:
+
+  - Correlation Coefficient: cor(normalized exon expression data, age, method = 'pearson')
+  - P-value of correlation: cor.test(normalized exon expression data, age, method = 'pearson')[['p.value']]
+
+  For this experiment, the significance level was set to α = 0.05. Pearson's correlations were performed for all exons.
+  
+  For each target gene, analysis results were organized into a matrix, with correlation coefficients and raw p-values as columns and the different exons as rows.
+  
+  Finally, the matrices for each gene were all compiled into a list called all_exon_correlations.
+
+```{r, echo=FALSE}
+library(dplyr)
+
+# Returns matrix with raw p-value of correlation and correlation coefficient (columns) for each exon (rows) for each target gene.
+compute_correlation_exon <- function(Cluster_ID) {
+  
+  # Filter exon_filt_SN_numeric for all exons having the belonging to the same gene
+  Exon <- exon_filt_SN_numeric %>% t() %>% data.frame()
+  Exon <- Exon %>% filter(Exon[,102] == Cluster_ID)
+  Exon <- Exon[,-102]
+  
+  # Computing correlations
+  Exon <- data.frame(t(Exon))
+  cor_Exon <- matrix(data = NA, nrow = dim(Exon)[2], ncol = 2)
+  colnames(cor_Exon) <- c('Correlation Coefficient', 'Raw p-value')
+  rownames(cor_Exon) <- colnames(Exon)
+  for (i in 1:dim(Exon)[2]) {
+    cor_Exon[i,'Correlation Coefficient'] <- cor(as.numeric(Exon[,i]), 
+                                                 age_exon, 
+                                                 method='pearson')
+    cor_Exon[i,'Raw p-value'] <- cor.test(as.numeric(Exon[,i]), 
+                                          age_exon, 
+                                          method='pearson')[["p.value"]]
+  }
+  return(cor_Exon)
+  
+}
+
+target_exon_correlations <- lapply(c(3359180, 3050388, 3266279, 2845921, 2350952, 3696666, 4055661, 4006210, 3937092), compute_correlation_exon)
+
+```
+
+____________________________________________________________________________________________
+
+August 12, 2020
+
+  To minimize the false discovery rate of significant correlations, the Benjamini-Hochberg procedure was applied to all the p-values using the p.adjust() function. First, p-values of correlation between age and all the exons, not just the exons of the target genes, had to be computed. Then the adjusted p-values were filtered again for those of the exons of the target genes. 
+  
+  This would also calculate correlations of all exons with age. These correlations were both filtered for the target genes and for ACGs (age-correlated genes) that were previously determined from the gene-level analysis.
+
+```{r, echo=FALSE}
+library(dplyr)
+
+# Computing all raw p values of correlation, along with correlation coefficients for each exon (row)
+all_exon_cor <- matrix(data = NA, nrow = dim(exon_filt_SN_numeric[-102,])[2], ncol = 5)
+colnames(all_exon_cor) <- c('Correlation Coefficient', 'Raw p-value', 'BH-corrected p-value', 'Transcript Cluster ID', 'Gene Assignment')
+for (i in 1:dim(exon_filt_SN_numeric[-102,])[2]) {
+  all_exon_cor[i, 'Correlation Coefficient'] <- cor(as.numeric(exon_filt_SN_numeric[-102,i]), 
+                                                    age_exon, 
+                                                    method='pearson')
+  all_exon_cor[i, 'Raw p-value'] <- cor.test(as.numeric(exon_filt_SN_numeric[-102,i]), 
+                                             age_exon, 
+                                             method='pearson')[["p.value"]]
+}
+rownames(all_exon_cor) <- colnames(exon_filt_SN_numeric[-102,])
+
+# Adding adjusted p-values
+all_exon_cor[, 'BH-corrected p-value'] <- p.adjust(all_exon_cor[, 'Raw p-value'], 
+                                                   method='BH')
+
+# Adding transcript cluster IDs and gene assignments to allow for filtering
+all_exon_cor[, 'Transcript Cluster ID'] <- exon_filt_SN_numeric[102,]
+all_exon_cor[, 'Gene Assignment'] <- exon_names[,"gene_assignment"]
+
+# Filtering for exons of target genes
+target_cluster_IDs <- c(3359180, 3050388, 3266279, 2845921, 2350952, 3696666, 4055661, 4006210, 3937092)
+target_exon_corr <- all_exon_cor %>% 
+  data.frame %>% 
+  filter(all_exon_cor[, 'Transcript Cluster ID'] %in% target_cluster_IDs)
+print(paste(sum(target_exon_corr$BH.corrected.p.value < 0.05), 
+            "target gene exons out of the 9 target genes that were significantly correlated with age"))
+
+```
+
+  Out of all the target genes, NQO1 had five exons that were significantly correlated with age (BH-corrected p-value < 0.05), all of which had negative correlation coefficients. This was quite an interesting result considering that the gene-level analysis revealed that NQO1 was not significantly correlated with age. This supports the concept that performing an exon-level analysis may be advantageous as it may provide results that would be masked by simply doing gene-level analysis.
+
+```{r}
+library(dplyr)
+
+# Filtering for ACGs determined by gene-level analysis
+ACG_exon_corr <- all_exon_cor %>% 
+  data.frame %>% 
+  filter(all_exon_cor[, 'Transcript Cluster ID'] %in% ACGs[, "ID"])
+print(paste(sum(ACG_exon_corr$BH.corrected.p.value < 0.05), 
+            "ACG exons out of the", 
+            length(ACG_exon_corr$BH.corrected.p.value), 
+            "exons from ACGs that were significantly correlated with age"))
+
+# Filtering for all exons with BH-corrected p-value < 0.05
+sig_corr_exon <- all_exon_cor %>% 
+  data.frame %>% 
+  filter(all_exon_cor[, 'BH-corrected p-value'] < 0.05)
+print(paste("Out of the", 
+            dim(sig_corr_exon)[1], 
+            "significantly correlated exons,", 
+            sum(sig_corr_exon$Transcript.Cluster.ID %in% ACGs[, "ID"]), 
+            "were from ACGs"))
+
+```
+
+  Interestingly, less than half of the exons from ACGs were significantly correlated with age. Additionally, only 4.09% of all exons that were significantly correlated were from ACGs, which indicates that the gene-level analysis left out almost 96% of all exons that were significantly correlated with age. Although this exon-level analysis did reveal interesting information about the age-correlated genes and the target genes that the gene-level analysis did not, this data cannot be used for identifying exons that contribute to neuromelanin formation as the Allen Human Brain Atlas and the other GEO datasets that are to be used in this study only provide a gene-level analysis.
+
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+AGE CORRELATIONS - VALIDATION IN PD PATIENTS
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+August 20, 2020
+
+  GSE8397 and GSE20292 were loaded into RStudio using getGEO() function from GEOquery package. 
+  
+```{r, echo=FALSE}
+library(GEOquery)
+
+GSE8397 <- getGEO("GSE8397", GSEMatrix = TRUE)
+GSE20292 <- getGEO("GSE20292", GSEMatrix = TRUE)
+
+```
+
+  The datasets were explored. The samples in each dataset were filtered for only Parkinson's patients and expression in the substantia nigra (sample annotations), and the probes in each dataset were labeled with their probe IDs. Additionally, since there were multiple probes in this data set, each probe needed to be aligned to a gene. The following procedure was used for aligning probes to genes using the collapseRows function from the WGCNA package [15]:
+  
+  - If there is only one probe for a gene, that one is chosen
+  - If there are two probes for one gene, the one with the max variance across all samples (both control and PD) is chosen (method = maxRowVariance)
+  - If there more than two probes for one gene, the probe with the highest connectivity (summed adjacency) is chosen (connectivityBasedCollapsing = TRUE)
+
+
+```{r, echo=FALSE}
+library(tidyverse)
+library(GEOquery)
+library(stringr)
+library(WGCNA)
+
+########### EXPLORING DATA ###########
+
+# GSE8397 info
+GSE8397_exp_gene <- GSE8397[["GSE8397-GPL96_series_matrix.txt.gz"]]@assayData[["exprs"]]
+GSE8397_sample_annotations <- GSE8397[["GSE8397-GPL96_series_matrix.txt.gz"]]@phenoData@data
+GSE8397_gene_IDs <- GSE8397[["GSE8397-GPL96_series_matrix.txt.gz"]]@featureData@data
+# head(GSE8397_sample_annotations)
+# head(GSE8397_gene_IDs)
+
+
+# GSE20292 info
+GSE20292_exp_gene <- GSE20292[["GSE20292_series_matrix.txt.gz"]]@assayData[["exprs"]]
+GSE20292_sample_annotations <- GSE20292[["GSE20292_series_matrix.txt.gz"]]@phenoData@data
+GSE20292_gene_IDs <- GSE20292[["GSE20292_series_matrix.txt.gz"]]@featureData@data
+# head(GSE20292_sample_annotations)
+# head(GSE20292_gene_IDs)
+
+
+########### PREPARING DATA ###########
+
+# GSE8397
+
+# Convert gene expression table to data frame
+GSE8397_exp_gene <- data.frame(GSE8397_exp_gene)
+
+# Add column containing gene symbols to gene expression data frame
+for (i in 1:dim(GSE8397_exp_gene)[1]) {
+  GSE8397_exp_gene[i, "Gene"] <- strsplit(GSE8397_gene_IDs[i,"Gene Symbol"], " ")[[1]][1]
+}
+
+# Remove rows (probes) without a gene assignment
+print(paste(sum(is.na(GSE8397_exp_gene$Gene)), "probes without gene assignments in GSE8397"))
+GSE8397_exp_gene <- GSE8397_exp_gene %>% filter(is.na(GSE8397_exp_gene$Gene) == FALSE)
+
+# Align probes to genes
+probe2gene_GSE8397 <- collapseRows(GSE8397_exp_gene[, -48], 
+                           rowGroup = GSE8397_exp_gene$Gene, 
+                           rowID = rownames(GSE8397_exp_gene),
+                           method = "maxRowVariance",
+                           connectivityBasedCollapsing = TRUE)
+GSE8397_exp_gene <- probe2gene_GSE8397[["datETcollapsed"]]
+print(paste(dim(GSE8397_exp_gene)[1], "genes were aligned to 22283 probes in GSE8397"))
+
+# Add columns that for type of sample and age to gene expression data frame
+GSE8397_exp_gene <- data.frame(GSE8397_exp_gene)
+GSE8397_exp_gene <- add_row(GSE8397_exp_gene, .before = 1)
+GSE8397_exp_gene <- add_row(GSE8397_exp_gene, .before = 1)
+GSE8397_exp_gene[1,] <- GSE8397_sample_annotations[,"title"]
+GSE8397_exp_gene[2,] <- as.numeric(str_sub(GSE8397_sample_annotations[,"age:ch1"], 1, 2))
+rownames(GSE8397_exp_gene)[1:2] <- c("sample_type", "age")
+
+# Extract age as its own vector
+GSE8397_exp_gene <- GSE8397_exp_gene %>% t %>% data.frame
+GSE8397_age_gene <- as.numeric(GSE8397_exp_gene$age)
+
+
+# GSE20292
+ 
+# Convert gene expression table to data frame
+GSE20292_exp_gene <- data.frame(GSE20292_exp_gene)
+
+# Add column containing gene symbols to gene expression data frame
+for (i in 1:dim(GSE20292_exp_gene)[1]) {
+  GSE20292_exp_gene[i, "Gene"] <- strsplit(GSE20292_gene_IDs[i,"Gene Symbol"], " ")[[1]][1]
+}
+
+# Remove rows (probes) without a gene assignment
+print(paste(sum(is.na(GSE20292_exp_gene$Gene)), "probes without gene assignments in GSE202972"))
+GSE20292_exp_gene <- GSE20292_exp_gene %>% filter(is.na(GSE20292_exp_gene$Gene) == FALSE)
+
+# Align probes to genes
+probe2gene_GSE20292 <- collapseRows(GSE20292_exp_gene[,-30], 
+                           rowGroup = GSE20292_exp_gene$Gene, 
+                           rowID = rownames(GSE20292_exp_gene),
+                           method = "maxRowVariance",
+                           connectivityBasedCollapsing = TRUE)
+GSE20292_exp_gene <- probe2gene_GSE20292[["datETcollapsed"]]
+print(paste(dim(GSE20292_exp_gene)[1], "genes were aligned to 22283 probes in GSE20292"))
+
+# Add columns that for type of sample and age to gene expression data frame
+GSE20292_exp_gene <- data.frame(GSE20292_exp_gene)
+GSE20292_exp_gene <- add_row(GSE20292_exp_gene, .before = 1)
+GSE20292_exp_gene <- add_row(GSE20292_exp_gene, .before = 1)
+GSE20292_exp_gene[1,] <- GSE20292_sample_annotations[,"disease state:ch1"]
+GSE20292_exp_gene[2,] <- as.numeric(GSE20292_sample_annotations[,"age:ch1"])
+rownames(GSE20292_exp_gene)[1:2] <- c("sample_type", "age")
+
+# Extract age as its own vector
+GSE20292_exp_gene <- GSE20292_exp_gene %>% t %>% data.frame
+GSE20292_age_gene <- as.numeric(GSE20292_exp_gene$age)
+
+
+########### FILTERING DATA ###########
+
+# GSE8397
+
+# Filter for expression in substantia nigra, for Parkinson's patients only
+GSE8397_exp_gene_SN_PD <- GSE8397_exp_gene[c(15:23, 32:46), ]
+
+# Extract age for PD patients in substantia nigra as its own numeric vector
+GSE8397_age_gene_SN_PD <- as.numeric(GSE8397_exp_gene_SN_PD$age)
+
+# Filter for expression only in 9 target genes
+GSE8397_exp_gene_SN_PD <- add_row(data.frame(GSE8397_exp_gene_SN_PD), .before = 1)
+GSE8397_exp_gene_SN_PD[1,] <- colnames(GSE8397_exp_gene_SN_PD)
+GSE8397_exp_gene_SN_PD_target <- GSE8397_exp_gene_SN_PD %>% 
+  t %>% 
+  data.frame %>% 
+  filter(GSE8397_exp_gene_SN_PD[1,] =='GSTM2' |
+         GSE8397_exp_gene_SN_PD[1,]=='NQO1' |
+         GSE8397_exp_gene_SN_PD[1,] =='TH' |
+         GSE8397_exp_gene_SN_PD[1,] =='SLC18A2' |
+         GSE8397_exp_gene_SN_PD[1,] =='SLC6A3' |
+         GSE8397_exp_gene_SN_PD[1,] =='DDC'|
+         GSE8397_exp_gene_SN_PD[1,] =='COMT' |
+         GSE8397_exp_gene_SN_PD[1,] =="MAOB" |
+         GSE8397_exp_gene_SN_PD[1,] =="MAOA" |
+         GSE8397_exp_gene_SN_PD[1,] =="sample_type" |
+         GSE8397_exp_gene_SN_PD[1,] =="age")
+GSE8397_exp_gene_SN_PD <- GSE8397_exp_gene_SN_PD[-1,]
+GSE8397_exp_gene_SN_PD_target <- GSE8397_exp_gene_SN_PD_target[,-1] %>% t
+
+
+# GSE20292
+
+# Filter for expression in substantia nigra, for Parkinson's patients only
+GSE20292_exp_gene_SN_PD <- GSE20292_exp_gene %>% filter(sample_type == "Parkinsons disease")
+
+# Extract age for PD patients in substantia nigra as its own numeric vector
+GSE20292_age_gene_SN_PD <- as.numeric(GSE20292_exp_gene_SN_PD$age)
+
+# Filter for expression only in 9 target genes
+GSE20292_exp_gene_SN_PD <- add_row(data.frame(GSE20292_exp_gene_SN_PD), .before = 1)
+GSE20292_exp_gene_SN_PD[1,] <- colnames(GSE20292_exp_gene_SN_PD)
+GSE20292_exp_gene_SN_PD_target <- GSE20292_exp_gene_SN_PD %>% 
+  t %>% 
+  data.frame %>% 
+  filter_all(any_vars(.=='GSTM2'|
+                      .=='NQO1'|
+                      .=='TH'|
+                      .=='SLC18A2'|
+                      .=='SLC6A3'|
+                      .=='DDC'|
+                      .=='COMT'|
+                      .=='MAOB'|
+                      .=='MAOA'|
+                      .=="sample_type"|
+                      .=="age"))
+GSE20292_exp_gene_SN_PD <- GSE20292_exp_gene_SN_PD[-1,]
+GSE20292_exp_gene_SN_PD_target <- GSE20292_exp_gene_SN_PD_target[,-1] %>% t
+
+```
+
+____________________________________________________________________________________________
+
+August 22, 2020
+
+  During the filtering of the data frames, the expression values had been converted to the character data type. In order to perform analyses, they needed to be converted back to numeric. In order to do this, the convert_to_numeric function was applied to the GSE8397_exp_gene_SN_PD_target, GSE8397_exp_gene_SN_PD, GSE20292_exp_gene_SN_PD_target, and GSE20292_exp_gene_SN_PD data frames. The age and sample_type columns had to be removed first.
+  
+  The new function returned a data frame containing only the expression values for each gene without age or sample type labels. This was not a reason for concern since the age feature of each sample had been extracted previously.
+
+```{r}
+
+GSE8397_exp_gene_SN_PD <- convert_to_numeric(GSE8397_exp_gene_SN_PD[,-c(1:2)])
+GSE8397_exp_gene_SN_PD_target <- convert_to_numeric(GSE8397_exp_gene_SN_PD_target[,-c(1:2)])
+
+GSE20292_exp_gene_SN_PD <- convert_to_numeric(GSE20292_exp_gene_SN_PD[,-c(1:2)])
+GSE20292_exp_gene_SN_PD_target <- convert_to_numeric(GSE20292_exp_gene_SN_PD_target[,-c(1:2)])
+
+
+```
+
+____________________________________________________________________________________________
+
+August 25, 2020
+
+  Both expression data frames had 22283 rows, or 22283 different genes. In order to ensure that all gene expression data will be included when these data frames are joined, it needed to be confirmed that all genes were the same. The intersect() function was used to determine this. If the two data frames had expression on the exact same genes, the conditional expression will return "TRUE".
+
+```{r}
+library(dplyr)
+
+# Confirmation that the two data frames (for GSE8397 and GSE20292) have expression data on all the same genes
+dim(GSE8397_exp_gene_SN_PD)[2] == length(intersect(colnames(GSE8397_exp_gene_SN_PD), colnames(GSE20292_exp_gene_SN_PD)))
+
+# Confirmation that the two data frames (for GSE8397 and GSE20292) have expression data on all the same target genes
+dim(GSE8397_exp_gene_SN_PD_target)[2] == length(intersect(colnames(GSE8397_exp_gene_SN_PD_target), colnames(GSE20292_exp_gene_SN_PD_target)))
+
+```
+
+  After it was confirmed that the GSE20292_exp_gene_SN_PD and GSE8397_exp_gene_SN_PD contained expression data on all the same genes, they could be joined into one data frame.
+
+```{r}
+
+# Joining expression data from both data frames
+exp_gene_SN_PD <- rbind.data.frame(GSE8397_exp_gene_SN_PD, GSE20292_exp_gene_SN_PD)
+exp_gene_SN_PD_target <-  rbind.data.frame(GSE8397_exp_gene_SN_PD_target, GSE20292_exp_gene_SN_PD_target)
+
+# Combining age numeric vectors
+age_gene_SN_PD <- c(GSE8397_age_gene_SN_PD, GSE20292_age_gene_SN_PD)
+
+```
+
+____________________________________________________________________________________________
+
+August 29, 2020
+
+  Now that the gene expression data frames have been joined, exploratory analysis needs to be performed on the data to ensure that the joined datasets can be analyzed together.
+  
+```{r}
+
+boxplot(t(exp_gene_SN_PD))
+
+```
+  
+  The boxplot revealed that the samples from GSE8397 gave systemically lower expression values than the samples from GSE20292. Therefore, to allow for joint analysis, the joint data frame was quantile normalized.
+  
+```{r}
+library(preprocessCore)
+
+exp_gene_SN_PD <- normalize.quantiles(as.matrix(t(exp_gene_SN_PD)))
+
+exp_gene_SN_PD_target <- normalize.quantiles(as.matrix(t(exp_gene_SN_PD_target)))
+
+boxplot(exp_gene_SN_PD)
+boxplot(exp_gene_SN_PD_target)
+
+
+```
+  
+____________________________________________________________________________________________
+
+September 3, 2020
+
+  Upon reading further literature, it was determined that it would be best not to analyze the two data sets together, as quantile normalization across two completely different data sets could affect some of the information. Therefore, the joint data frames were removed and all analyses will proceed for each data sets individually.
+  
+```{r}
+
+rm(exp_gene_SN_PD)
+rm(exp_gene_SN_PD_target)
+rm(age_gene_SN_PD)
+
+```
+
+____________________________________________________________________________________________
+
+September 4, 2020
+
+```{r}
+
+# Transpose data frames containing gene expression for each sample to have genes as rows and samples as columns
+GSE8397_exp_gene_SN_PD <- t(GSE8397_exp_gene_SN_PD)
+GSE8397_exp_gene_SN_PD_target <- t(GSE8397_exp_gene_SN_PD_target)
+GSE20292_exp_gene_SN_PD <- t(GSE20292_exp_gene_SN_PD)
+GSE20292_exp_gene_SN_PD_target <- t(GSE20292_exp_gene_SN_PD_target)
+
+# Compute age correlations with BH-correction of p-values
+
+compute_all_age_correlations <- function(exp, age_vector) {
+  
+  all_cor <- matrix(nrow = dim(exp)[1], ncol = 4) %>% data.frame
+  colnames(all_cor) <- c("Gene", "Correlation Coefficient", "Raw p-value", "BH-corrected p-value")
+  rownames(all_cor) <- rownames(exp)
+  all_cor[,"Gene"] <- rownames(exp)
+
+  for (i in 1:dim(exp)[1]) {
+    cor <- cor.test(as.numeric(exp[i, ]), 
+                    age_vector, 
+                    method = "pearson")
+    all_cor[i, "Correlation Coefficient"] <- cor[["estimate"]][["cor"]]
+    all_cor[i, "Raw p-value"] <- cor[["p.value"]]
+  }
+  
+  all_cor[, "BH-corrected p-value"] <- p.adjust(all_cor[, "Raw p-value"], 
+                                                method = "BH")
+  return(all_cor)
+}
+
+GSE8397_all_cor <- compute_all_age_correlations(GSE8397_exp_gene_SN_PD, GSE8397_age_gene_SN_PD)
+GSE8397_target_cor <- compute_all_age_correlations(GSE8397_exp_gene_SN_PD_target, GSE8397_age_gene_SN_PD)
+GSE20292_all_cor <- compute_all_age_correlations(GSE20292_exp_gene_SN_PD, GSE20292_age_gene_SN_PD)
+GSE20292_target_cor <- compute_all_age_correlations(GSE20292_exp_gene_SN_PD_target, GSE20292_age_gene_SN_PD)
+
+print(paste(sum(GSE8397_all_cor[, "BH-corrected p-value"] < 0.05), "genes that were significantly correlated with age in PD patients from GSE8397"))
+print(paste(sum(GSE20292_all_cor[, "BH-corrected p-value"] < 0.05), "genes that were significantly correlated with age in PD patients from GSE20292"))
+
+
+```
+  
+  Evidently, there were no genes that were observed to be significantly correlated with age (BH-corrected p-value > 0.05). This was most likely due to the sample sizes. GSE8397 contained only 24 samples from PD patients, and GSE20292 contained just 11 samples. Additionally, PD  samples come from generally older patients anyway. This can be demonstrated by looking at boxplots of the ages of patients from UKBEC, ages of PD patients from GSE8397, and ages of PD patients from GSE20292.
+  
+```{r}
+
+boxplot(age_gene_SN, GSE8397_age_gene_SN_PD, GSE20292_age_gene_SN_PD, ylab = "Age")
+
+# t-test of UKBEC age data and GSE8397 PD age data
+t.test(age_gene_SN, GSE8397_age_gene_SN_PD)
+
+# t-test of UKBEC age data and GSE20292 PD age data
+t.test(age_gene_SN, GSE20292_age_gene_SN_PD)
+
+```
+  Boxplot 1 corresponds to UKBEC age data, boxplot 2 corresponds to GSE8397 PD age data, and boxplot 3 corresponds to GSE20292 PD age data. Evidently, the PD age data is systematically larger than the data from UKBEC, which contains non-neurological individuals. Both the GSE8397 PD age data and the GSE20292 PD age data were very significantly different from the UKBEC age data, as noted from the p-values of the t-tests being far less than 0.05 (0.000000000000001615 and 0.0000003617 respectively). This skewedness of PD sample ages makes it very difficult to perform any reasonable age correlations. Using other data sets with age data distributions that match the UKBEC distribution more closely may be a viable option for performing age correlation validation analysis in PD patients. Otherwise, the results from performing age correlations with GSE8397 and GSE20292 are not valid, and therefore the current list of ACGs obtained from UKBEC correlation analysis is not altered. 
+
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+mDBR
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+September 23, 2020
+
+  The formation of neuromelanin in the brain is a phenomenon that is known to be unique to humans [2], as animals do not accumulate the pigment. It is observed to form only in certain catecholaminergic neurons, namely the dopaminergic neurons of the substantia nigra pars compacta (SNpc) [1]. Interestingly, neuromelanin is closely linked to Parkinson's disease, as it is these dopaminergic neuromelanin-containing neurons that are exclusively lost in Parkinson's [1].
+
+  Currently, it is assumed that neuromelanin formed in dopaminergic neurons is a product of dopamine oxidation, a process not known to be catalyzed by any particular enzymes [4-6]. However, studies in animal models have failed to produce neuromelanin by solely increasing dopamine levels and dopamine oxidation [2]. Additionally, neuromelanin does not form in all catecholaminergic neurons. In fact, the dopaminergic neurons of the ventral tegmental area (VTA) generally lack neuromelanin [1], suggesting that some other molecular mechanism may be involved in neuromelanin formation.
+
+  The goal of this section, called mDBR (melanized dopaminergic brain region analysis), is to use gene expression data to give some insight into the formation of neuromelanin. Learning more about these molecular pathways may even provide some insight into the mechanisms that cause the selective death of neuromelanin-containing neurons in Parkinson's disease. The primary method by which this is achieved is by analyzing differences in gene expression between the SNpc, a brain region containing a large population of melanized dopaminergic neurons, and the VTA, a brain region containing a large population of non-melanized dopaminergic neurons.
+
+  The Allen Human Brain Atlas (https://human.brain-map.org/microarray/search) provides microarray gene expression data of numerous different brain regions in 6 neurologically and neuropathologically normal individuals, including the SNpc and VTA. It also provides a function on its website that does differential expression analysis of different brain regions, outputting p-values and fold change values for each probe. This differential expression analysis uses a 2-sample t-test followed by Benjamini-Hochberg (BH) false discorvery rate correction.However, it only outputs the fold change for probes that are upregulated in the target structure with respect to the contrast structure. Therefore, this search had to be done twice: once with the SNpc as the target structure and the VTA as the contrast structure, and another time with the VTA as the target structure and the SNpc as the contrast structure. This data could be directly downloaded from the site. However, it could only be downloaded 2000 probes at a time. This was rather tedious, and knowing that many probes are not significantly differentially expressed anyway, only the first 10000 probes with the highest fold change were downloaded, giving a total of 20000 probes (10000 that are upregulated in the SNpc with respect to the VTA, and 10000 that are upregulated in the VTA with respect to the SNpc).
+
+  First, the differential expression data of the top 20000 probes was loaded into RStudio. This data included fold change values and p-values for each individual probe.
+```{r, echo=FALSE}
+library(readr)
+library(dplyr)
+
+
+# SNpc target, VTA contrast
+files_1 <- list.files(path = "/Users/rezaadibnia/Desktop/PD NM Project/mDBR - VTA vs SNpc/SNpc target, VTA contrast/", pattern = "Probes_.*csv", full.names = TRUE, ignore.case = FALSE)
+SNt_VTAc_probe_list <- lapply(files_1, read_csv)
+SNt_VTAc_probes <- data.frame(bind_rows(SNt_VTAc_probe_list))
+
+# VTA target, SNpc contrast
+files_2 <- list.files(path = "/Users/rezaadibnia/Desktop/PD NM Project/mDBR - VTA vs SNpc/VTA target, SNpc contrast/", pattern = "Probes_.*csv", full.names = TRUE, ignore.case = FALSE)
+VTAt_SNc_probe_list <- lapply(files_2, read_csv)
+VTAt_SNc_probes <- data.frame(bind_rows(VTAt_SNc_probe_list))
+
+```
+
+
+  After loading in the data, it needed to be transformed to allow for simpler analysis. This included transforming fold change values for VTA target, SNpc contrast. P-values did not need to be BH-corrected, because the differential expression search already performed this correction. The definition of the fold change of B with respect to A is B/A. Therefore, the fold change of A with respect to B is A/B. In other words, the fold change of gene expression in the SNpc with respect to the VTA is equal to 1/(the fold change of gene expression in the VTA with respect to the SNpc). By taking the reciprocal of the fold change values with VTA target and SNpc contrast, we get the equivalent fold change for SNpc target and VTA contrast, allowing us to combine the differential expression analysis of all 20000 probes into one data frame.
+```{r}
+
+# Converting VTA target, SNpc contrast fold change to SNpc target, VTA contrast fold change
+VTAt_SNc_probes$fold.change <- 1/(VTAt_SNc_probes$fold.change)
+
+# Combining the data frames containing p values and fold change
+mDBR_p_and_FC <- data.frame(bind_rows(SNt_VTAc_probes, VTAt_SNc_probes))
+mDBR_p_and_FC <- mDBR_p_and_FC[,c(4,10:11)]
+
+
+```
+
+____________________________________________________________________________________________
+
+September 24, 2020
+
+FILTERING FOR P < 0.05 and FC > 90th PERCENTILE (TOP 10%)
+  Filters for top 10% of genes with highest FC compared to all probes, not just significantly differentially expressed prboes VTA target, SNpc contrast is filtered for fold changes less than the 10th percentile because fold change are all less than 1. The lowest 10% of fold change values indicate the top 10% of probes that are the most downregulated in the SNpc compared to the VTA.
+```{r}
+library(dplyr)
+
+# SNpc target, VTA contrast
+sig_SNt_VTAc_probes <- SNt_VTAc_probes %>% 
+  filter(SNt_VTAc_probes$p < 0.05 & 
+         SNt_VTAc_probes$fold.change > quantile(SNt_VTAc_probes$fold.change, 0.90))
+
+# VTA target, SNpc contrast
+sig_VTAt_SNc_probes <- VTAt_SNc_probes %>% 
+  filter(VTAt_SNc_probes$p < 0.05 & 
+         VTAt_SNc_probes$fold.change < quantile(VTAt_SNc_probes$fold.change, 0.10))
+
+```
+
+  In order to visualize the probes that are differentially expressed, a volcano plot of all the probes was constructed. The vertical lines indicate the log2(fold change) thresholds, the horizontal line indicates the p-value threshold (0.05). The top 10% of upregulated probes and bottom 10% of downregulated probes were chosen to be significant (based on fold change values). The significantly differentially expressed probes are found in the upper-left and upper-right corners of the volcano plot. Since there were many probes that were significantly upregulated or downregulated, the individual points were not labeled on the volcano plot.
+```{r, echo=FALSE}
+library(ggplot2)
+library(dplyr)
+
+# Vertical lines for log2(fold change) thresholds, horizontal line for the p-value threshold
+# Top 10% of upregulated probes and bottom 10% of downregulated probes are chosen
+horz_min_mDBR = quantile(log2(VTAt_SNc_probes$fold.change), 0.10)
+horz_max_mDBR = quantile(log2(SNt_VTAc_probes$fold.change), 0.90)
+
+# Add a column to mDBR_p_and_FC data frame indicating whether probe is upregulated, downregulated, or not significant
+mDBR_p_and_FC$differentially_expressed <- "Not Significant"
+# If log2Foldchange > horz_max and pvalue < 0.05, set as "Upregulated" 
+mDBR_p_and_FC$differentially_expressed[log2(mDBR_p_and_FC$fold.change) > horz_max_mDBR & 
+                                         mDBR_p_and_FC$p < 0.05] <- "Upregulated"
+# If log2Foldchange < horz_min and pvalue < 0.05, set as "Downregulated"
+mDBR_p_and_FC$differentially_expressed[log2(mDBR_p_and_FC$fold.change) < horz_min_mDBR & 
+                                         mDBR_p_and_FC$p < 0.05] <- "Downregulated"
+
+# Construct volcano plot                      
+volcano_plot_mDBR <- ggplot(data=mDBR_p_and_FC, 
+                       aes(x=log2(fold.change), 
+                           y=-log10(p), 
+                           col=differentially_expressed)) + 
+                      geom_point(size = 1) + 
+                      scale_colour_manual(values = c("Not Significant"="grey", 
+                                                     "Downregulated"="red", 
+                                                     "Upregulated"="blue")) +
+                      geom_vline(xintercept=c(horz_min_mDBR, horz_max_mDBR), 
+                                 col="black") + 
+                      geom_hline(yintercept=-log10(0.05), 
+                                 col="black") +
+                      labs(x = bquote(""*log[2]*"FC"), 
+                           y = bquote("-"*log[10]*" "*italic(P)*"-value")) +
+                      ggtitle("Probes Differentially Expressed in SNpc") + 
+                      theme
+
+```
+
+
+```{r}
+
+volcano_plot_mDBR
+
+
+```
+
+  This volcano plot showed only probes, and not individual genes. For it to show genes only, the genes needed to be aligned to their probes first.
+
+____________________________________________________________________________________________
+
+September 25, 2020
+
+  Expression data for the top 20000 differentially expressed probes was read into RStudio. This data is actually not necessary to overall analysis, but is good to have for reference.
+```{r, echo=FALSE}
+library(readr)
+library(dplyr)
+
+read_csv_labeled_header <- function(file) {
+  labels = c("Probe_IDs", "SN_1", "SN_2", "SN_3", "SN_4", "SN_5", "SN_6", "VTA_1", "VTA_2", "VTA_3", "VTA_4", "VTA_5", "VTA_6")
+  read_csv(file, col_names = labels)
+}
+
+# SNpc target, VTA contrast
+files_expr_1 <- list.files(path = "/Users/rezaadibnia/Desktop/PD NM Project/mDBR - VTA vs SNpc/SNpc target, VTA contrast/", pattern = "Expression_.*csv", full.names = TRUE, ignore.case = FALSE)
+SNt_VTAc_expr_list <- lapply(files_expr_1, read_csv_labeled_header)
+SNt_VTAc_expr <- data.frame(bind_rows(SNt_VTAc_expr_list))
+
+# VTA target, SNpc contrast
+files_expr_2 <- list.files(path = "/Users/rezaadibnia/Desktop/PD NM Project/mDBR - VTA vs SNpc/VTA target, SNpc contrast/", pattern = "Expression_.*csv", full.names = TRUE, ignore.case = FALSE)
+VTAt_SNc_expr_list <- lapply(files_expr_2, read_csv_labeled_header)
+VTAt_SNc_expr <- data.frame(bind_rows(VTAt_SNc_expr_list))
+
+```
+
+  Expression and probe data frames were joining into one, giving a data frame containing all both the expression of each probe in each sample, and the p-value and fold change for that gene.
+```{r}
+library(dplyr)
+
+SNt_VTAc_expr <- SNt_VTAc_expr %>% inner_join(SNt_VTAc_probes, by = c("Probe_IDs" = "id"))
+VTAt_SNc_expr <- VTAt_SNc_expr %>% inner_join(VTAt_SNc_probes, by = c("Probe_IDs" = "id"))
+
+sig_SNt_VTAc_expr <- SNt_VTAc_expr %>% inner_join(sig_SNt_VTAc_probes, by = c("Probe_IDs" = "id"))
+sig_VTAt_SNc_expr <- VTAt_SNc_expr %>% inner_join(sig_VTAt_SNc_probes, by = c("Probe_IDs" = "id"))
+
+mDBR_expr <- data.frame(bind_rows(SNt_VTAc_expr, VTAt_SNc_expr))
+sig_mDBR_expr <- data.frame(bind_rows(sig_SNt_VTAc_expr, sig_VTAt_SNc_expr))
+
+```
+
+____________________________________________________________________________________________
+
+September 26, 2020
+
+  After filtering for probes that had p-values < 0.05 and significant fold changes, the probes needed to be aligned to individual genes. To do this, the expression data for all probes in all brain regions in all 6 donors had to be downloaded from Allen Human Brain Atlas (AHBA). The probes lacking Entrez IDs were first filtered out. Conveniently, AHBA provides a presence/absence flag that determines whether a certain probe's expression is well above the background levels or not. This flag was used to filter out any probes that are not expressed above the background in less than 1% of all samples.
+  There may be multiple probes that align to the same gene, but only one probe per gene can be selected. Therefore, a systematic method was used to align probes to genes using the collapseRows function from the WGCNA package, similar to methods previously used in the literature [15]:
+
+  - If there is only one probe for a gene, that one is chosen
+  - If there are two probes for one gene, the one with the max variance across all samples is chosen (method = maxRowVariance)
+  - If there more than two probes for one gene, the probe with the highest connectivity (summed adjacency) is chosen (connectivityBasedCollapsing = TRUE)
+
+```{r}
+library(WGCNA)
+
+########## Load data ##########
+
+# Set donor names
+donorNames <- c("donor9861", "donor10021", "donor12876", "donor14380", "donor15496", "donor15697")
+names(donorNames) <- donorNames
+
+# Location of AHBA directories
+ahba_download <- "/Users/rezaadibnia/Desktop/AHBA Full Data/Microarray" # Where downloaded files are stored
+
+# Read in probe info (files are the same for each donor)
+probeInfo <- read.csv(paste0(ahba_download, "/normalized_microarray_donor9861/Probes.csv")) # Same for each donor
+
+# Read expression data for each donor (probes x samples)
+brainExpr <- lapply(donorNames, function(d){
+  file1 <- paste0(ahba_download, "/normalized_microarray_", d, "/MicroarrayExpression.csv")
+  e <- read.csv(file1, header = FALSE)
+  rownames(e) <- e[,1]
+  e <- e[,-1]
+  file2 <- paste0(ahba_download, "/normalized_microarray_", d, "/SampleAnnot.csv")
+  sample_annotation <- read.csv(file2)
+  colnames(e) <- sample_annotation$structure_id
+  e
+})
+
+########## Filter probes based on concatenated expression data from all donors ##########
+
+# Probes with missing Entrez IDs
+probes_missing_entrezID <- is.na(probeInfo$entrez_id) # same in all donors
+print(paste(sum(probes_missing_entrezID), "probes with missing entrez IDs"))
+
+# Probes with expression well above background in at least 1% of samples in all donors
+pa_call <- lapply(donorNames, function(d){
+  file <- paste0(ahba_download, "/normalized_microarray_", d, "/PACall.csv")  
+  pa <- read.csv(file, header = FALSE)
+  rownames(pa) <- pa[,1]
+  pa[,-1]
+})
+pa_concat <- Reduce(cbind, pa_call)
+sum <- rowSums(pa_concat)
+low_presence <- sum < 0.01*ncol(pa_concat)
+print(paste(sum(low_presence), "probes present in <1% of samples"))
+
+# Concatenate data across all donors and filter probes by ID
+expr_concat <- Reduce(cbind, brainExpr)
+expr_concat <- expr_concat[!(probes_missing_entrezID | low_presence),]
+probeInfo <- probeInfo[!(probes_missing_entrezID | low_presence), ]
+
+probe2gene <- collapseRows(expr_concat, 
+                           rowGroup = probeInfo$entrez_id, 
+                           rowID = probeInfo$probe_id,
+                           method = "maxRowVariance",
+                           connectivityBasedCollapsing = TRUE
+                           )
+selected_probes <- probe2gene$selectedRow
+entrez_id <- probeInfo$entrez_id[selected_probes]
+entrez_order <- order(entrez_id)
+
+probeInfo <- probeInfo[selected_probes, ]
+probeInfo <- probeInfo[entrez_order,]
+
+```
+
+  To align significantly differentially expressed probes to genes, the data frame containing the significantly differentially expressed probes and the data frame containing all the probes selected for each genes were joined by probe ID.
+```{r}
+library(dplyr)
+
+# Combine data frames by probe ID to filter out all probes not corresponding to a gene
+final_expr <- sig_mDBR_expr %>% inner_join(probeInfo, by = c("Probe_IDs" = "probe_id"))
+
+# Remove unnecessary and repeated columns
+final_expr <- final_expr[,-c(14, 18:21, 24:29)] %>% data.frame
+final_expr <- final_expr[order(final_expr$fold.change.x, decreasing = TRUE), ]
+
+mDBR_genes <- final_expr[,c(15, 17:18)]
+colnames(mDBR_genes) <- c("Gene", "p", "fold.change")
+
+# Top 10 upregulated genes
+mDBR_genes[1:10,]
+
+# Top 10 downregulated genes
+mDBR_genes[730:739,]
+
+```
+  
+  Among the 739 genes found to be significantly upregulated or downregulated in the SNpc relative to the VTA were two of the target genes:
+  - SLC18A2 (BH-corrected p = 0.00145, FC = 4.656)
+  - SLC6A3 (BH-corrected p = 0.000828, FC = 4.784)
+  
+  The SLC18A2 gene codes for the VMAT2 enzyme, which transports dopamine into monoaminergic vesicles to prevent it from oxidizing [2]. VMAT2 activity has been shown to be inversely proportional to neuromelanin levels, so one would hypothesize that higher SLC18A2 expression would contribute to less neuromelanin [2], and therefore it should be downregulated in melanized dopaminergic brain regions. However, the opposite case is evident here, indicating that the hypothesis was rejected. With fold change = 4.656, SLC18A2 is actually upregulated in the melanized SNpc. This suggests that there may be more at play in neuromelanin formation than just the action of VMAT2, and that VMAT2 activity is only inversely related to neuromelanin in specific in vitro settings.
+  
+  COMTD1 was also significantly upregulated in the SNpc (BH-corrected p = 0.004663278, FC = 2.149), a gene that is closely related to the target gene COMT.
+  
+  Additionally, there were numerous other genes linked to dopamine, including dopamine receptor 2 (DRD2, BH-corrected p = 1.72e-06, FC = 3.341) and dopamine receptor 5 (DRD5, BH-corrected p = 1.47e-09, FC = 0.2442002). This, as well as the upregulation of SLC18A2 and SLC6A3, may be due to a difference in dopaminergic neuron population size between the two brain regions. Therefore, it would be wise to perform gene expression analysis while correcting for cell type. This would 
+
+  Further analysis should be done on these 696 genes to determine which molecular pathways they are involved in.
+  
+____________________________________________________________________________________________
+
+September 27, 2020
+
+  Differentially expressed genes were visualized in a volcano plot, similar to how probes visualized previously.
+
+```{r}
+library(ggplot2)
+library(dplyr)
+
+# Align all probes to genes
+mDBR_expr_genes <- mDBR_expr %>% inner_join(probeInfo, by = c("Probe_IDs" = "probe_id"))
+print(paste(dim(mDBR_expr_genes)[1], "genes were aligned to 20000 probes"))
+
+# Filter for upregulated and downregulated genes, separating into different data frames
+up_mDBR_genes_plot <- mDBR_expr_genes %>% filter(mDBR_expr_genes$fold.change > 1)
+down_mDBR_genes_plot <- mDBR_expr_genes %>% filter(mDBR_expr_genes$fold.change < 1)
+
+# Vertical lines for log2(fold change) thresholds, horizontal line for the p-value threshold
+# Top 10% of upregulated probes and bottom 10% of downregulated probes are chosen
+horz_min_mDBR = quantile(log2(down_mDBR_genes_plot$fold.change), 0.10)
+horz_max_mDBR = quantile(log2(up_mDBR_genes_plot$fold.change), 0.90)
+
+# Add a column to mDBR_genes data frame indicating whether probe is upregulated, downregulated, or not significant
+mDBR_expr_genes$differentially_expressed <- "Not Significant"
+# If log2Foldchange > horz_max and pvalue < 0.05, set as "Upregulated" 
+mDBR_expr_genes$differentially_expressed[log2(mDBR_expr_genes$fold.change) > horz_max_mDBR & 
+                                         mDBR_expr_genes$p < 0.05] <- "Upregulated"
+# If mDBR_expr_genes < horz_min and pvalue < 0.05, set as "Downregulated"
+mDBR_expr_genes$differentially_expressed[log2(mDBR_expr_genes$fold.change) < horz_min_mDBR & 
+                                         mDBR_expr_genes$p < 0.05] <- "Downregulated"
+
+# Construct volcano plot                      
+volcano_plot_mDBR <- ggplot(data=mDBR_expr_genes, 
+                       aes(x=log2(fold.change), 
+                           y=-log10(p), 
+                           col=differentially_expressed)) + 
+                      geom_point(size = 1) + 
+                      scale_colour_manual(values = c("Not Significant"="grey", 
+                                                     "Downregulated"="red", 
+                                                     "Upregulated"="blue")) +
+                      geom_vline(xintercept=c(horz_min_mDBR, horz_max_mDBR), 
+                                 col="black") + 
+                      geom_hline(yintercept=-log10(0.05), 
+                                 col="black") +
+                      labs(x = bquote(""*log[2]*"FC"), 
+                           y = bquote("-"*log[10]*" "*italic(P)*"-value")) +
+                      ggtitle("Genes Differentially Expressed in Substantia Nigra Pars Compacta (SNpc)") + 
+                      theme
+
+volcano_plot_mDBR
+
+
+```
+
+____________________________________________________________________________________________
+  
+September 28, 2020
+
+  Genes found to be significantly differentially expressed in the SNpc were separated into those that were upregulated and those that were downregulated. They were written to csv files to make it easier to copy and paste the gene lists into enrichment analysis programs.
+```{r}
+library(dplyr)
+
+up_mDBR_genes <- mDBR_genes %>% filter(mDBR_genes$fold.change > 1)
+write.csv(x=up_mDBR_genes, file="up_mDBR_genes.csv")
+
+down_mDBR_genes <- mDBR_genes %>% filter(mDBR_genes$fold.change < 1)
+write.csv(x=down_mDBR_genes, file="down_mDBR_genes.csv")
+
+```
+
+  Gene set enrichment analysis was performed for these two gene sets (upregulated in SNpc and downregulated in SNpc). These gene sets were inputted into the PANTHER classification system for gene ontology (GO) enrichment analysis. The goal of this was to identify the GO terms associated with biological processes for which each gene set is enriched using Fischer's exact test with false discovery rate calculation (search for "biological process"). A search was also done for enrichment of cellular components (search for "cellular component" in PANTHER database). Results in PANTHER classification system were deemed significant if the false discovery rate (FDR) p-value < 0.05. These gene sets were also inputted into the STRING database to determine how their proteins interact. While STRING DB does also provide GO enrichment analysis, PANTHER DB allows for the input of more genes, therefore GO results from PANTHER DB were preferred. The results of this analysis are listed below:
+  
+PANTHER DB:
+  Upregulated in SNpc:
+    - Biological process search:
+      - Biological processes upregulated in the SNpc were generally associated with dopaminergic neurons and synapses
+      - Aminergic neurotransmitter loading into synaptic vesicle (fold enrichment = 43.03, FDR p = 0.0478)
+        - Includes SLC18A2, DDC, VAT1
+      - Catecholamine biosynthetic process (fold enrichment = 14.34, FDR p = 0.0217)
+        - Includes SLC18A2, DDC, VAT1 
+      - Dopaminergic neuron differentiation (fold enrichment = 11.10, FDR p = 0.0163)
+        - Includes RSPO2, LMX1B, EN1, WNT3, PITX3, FOXA1
+      - Regulation of dopamine secretion (fold enrichment = 9.56, FDR p = 0.0261)
+        - Includes RAB3A, SYT17, SNCA, SYT1, DRD2, CHRNA6
+      - Calcium-ion regulated exocytosis (fold enrichment = 9.56, FDR p = 0.010)
+      - Synaptic vesicle exocytosis (fold enrichment = 9.56, FDR p = 0.00137)
+      - Positive regulation of synapse assembly (fold enrichment = 6.95, FDR p = 0.0170)
+      - Regulation of exocytosis (fold enrichment = 3.67, FDR p = 0.0311)
+      - Regulation of transmembrane transporter activity (fold enrichment = 3.27, FDR p = 0.0217)
+      - Axonogenesis (fold enrichment = 2.80, FDR p = 0.0296)
+      - Modulation of chemical synaptic transmission (fold enrichment = 2.76, FDR p = 0.0247)
+      - Regulation of membrane potential (fold enrichment = 2.61, FDR p = 0.0444)
+      - Ion transport (fold enrichment = 1.89, FDR p = 0.0295)
+      - Gene expression (fold enrichment = 0.30, FDR p = 0.00101)
+      - RNA metabolic process (fold enrichment = 0.25, FDR p = 0.00252)
+    - Cellular component search:
+      - Clathrin-sculpted monoamine transport vesicle membrane (fold enrichment = 45.89, FDR p = 0.00182)
+      - Cytoskeleton of presynaptic active zone
+      - Platelet dense tubular network membrane
+      - Terminal bouton
+      - Synaptic vesicle membrane
+      - Sacroplasm
+      - Glutamatergic synapse (fold enrichment = 3.31, FDR p = 0.00918)
+      - Postsynaptic membrane (fold enrichment = 3.13, FDR p = 0.0169)
+      - Ion channel complex
+      - Postsynaptic density
+      - Integral component of plasma membrane	
+      - Negatively enriched for nucleoplasm (fold enrichment = 0.65, FDR p = 0.0390)
+
+  Downregulated in SNpc:
+    - Biological process search:
+      - Regulation of epinephrine secretion	(fold enrichment = 39.57, FDR p = 0.00283)
+        - Includes VIP, CRH, CARTPT, ADRA2A
+      - Neuron-glial cell signaling	(fold enrichment = 35.61, FDR p = 0.0197)
+        - Includes ADRA1A, ADRA1D, ADRA1B
+      - Positive regulation of glucocorticoid secretion	(fold enrichment = 29.68, FDR p = 0.0256)
+        - Includes GALR1, CRH, TAC1
+      - Positive regulation of heart rate by epinephrine-norepinephrine	(fold enrichment = 29.68, FDR p = 0.0255)
+        - Includes ADRA1A, ADRA1D, ADRA1B
+        - Positive regulation of blood pressure by epinephrine-norepinephrine	(fold enrichment = 33.92, FDR p = 0.00325)
+          - Includes ADRA1A, ADRA1D, ADRA1B, DRD5
+      - Regulation of serotonin secretion	(fold enrichment = 29.68, FDR p = 0.00440)
+        - Incluldes SLC6A4, CNR1, HTR1A, CRH
+      - Adenylate cyclase-activating adrenergic receptor signaling pathway (fold enrichment = 14.13, FDR p = 0.00684)
+        - Adrenergic receptor signaling pathway	(fold enrichment = 12.90, FDR p = 0.00898)
+          - Includes ADRA1A, ADRA1D, ADRA1B, DRD5, ADRA2A
+      - Positive regulation of cAMP-mediated signaling (fold enrichment = 13.49, FDR p = 0.00794)
+      - Neurotransmitter biosynthetic process	(fold enrichment = 13.19, FDR p = 0.0296)
+        - Includes SLC6A4, GAD2, NOS1, GAD1
+      - Regulation of synaptic transmission, GABAergic (fold enrichment = 13.19, FDR p = 0.0296)
+        - Includes ADRA1A, BAIAP3, CNR1, CNTNAP4, TAC1
+      - Oligodendrocyte differentiation	(fold enrichment = 5.77, FDR p = 0.0253)
+        - Includes FA2H, PLP1, BOK, NKX6-1, NKX2-2, ZNF488, NKX6-2
+      - Membrane repolarization during cardiac muscle cell action potential
+      - Neuron fate specification
+      - Positive regulation of calcium ion import
+      - Behavioral fear response
+      - Vasoconstriction
+      - Negative regulation of potassium ion transport
+      - Extracellular matrix organization
+      - Semaphorin-plexin signaling pathway
+      - Cardiac muscle cell action potential involved in contraction
+      - Neuropeptide signaling pathway
+      - Negative regulation of blood pressure
+      - Diencephalon development
+      - Adenylate cyclase-inhibiting G protein-coupled receptor signaling pathway
+      - Pancreas development
+      - Ventricular cardiac muscle tissue development
+      - Sensory perception of pain
+      - Phospholipase C-activating G protein-coupled receptor signaling pathway	
+      - Cardiac ventricle morphogenesis
+      - Endocrine system development
+      - Regulation of cardiac muscle contraction
+      - Epithelial cell proliferation
+      - Nerve development
+      - Epithelial cell migration
+      - Regulation of neurotransmitter receptor activity
+      - Regulation of potassium ion transmembrane transport
+      - Response to catecholamine
+      - Response to ethanol
+      - Regulation of postsynaptic membrane potential
+      - Regulation of cation channel activity
+      - Positive regulation of neurogenesis
+      - Positive regulation of cation transmembrane transport
+      - Response to alkaloid
+      - Locomotory behavior
+      - Regulation of G protein-coupled receptor signaling pathway
+      - Chemical synaptic transmission
+      - Adult behavior
+      - Regulation of axonogenesis
+      - Regulation of insulin secretion
+      - Regulation of synaptic plasticity
+      - Axonogenesis
+    - Cellular component search:
+      - Dopaminergic synapse (fold enrichment = 19.78, FDR p = 0.0342)
+        - Includes RAB3B, CHRNA5, ADRA2A
+      - Main axon
+      - Presynaptic membrane
+      - Synaptic vesicle membrane
+      - Perikaryon
+      - Postsynaptic membrane
+      - Dendrite
+      - Negatively enriched for cytosol	and nucleoplasm GO terms (genes downregulated in SNpc are not those that are present in cytosol or nucleoplasm)
+
+STRING DB:
+
+  Upregulated in SNpc: 354 proteins aligned to 374 genes
+    - Medium confidence (0.400) and higher edges shown only
+    - Large cluster of nodes and edges in center of network includes DDC, SLC18A2, SLC6A3, DRD2, SNCA, GAL, PRL, PROK2, AGTR1, DLGAP3, GNG3, KCNJ6, RAB3A
+    - GO term enrichment analysis by STRING found similar results to PANTHER DB
+    
+  Downregulated in SNpc: 346 proteins aligned to 365 genes
+    - Medium confidence (0.400) and higher edges shown only
+    - Large cluster of highly connected proteins (most nodes with highest confidence edges connecting to all other nodes)
+      - Includes GAD1, GAD2, SLC6A4, ADRA2A, GALR1, PNOC, GRM7, CNR1, SLC17A6, HTR2C, DRD5, CRH, PENK, ADCYAP1, GNG4, TAC1, NMBR, CHRNA5, OPRM1, APLNR, SSTR2, HTR1A, TAS2R5, CALB1, PMCH, SST, ADCYAP1
+    - GO term enrichment analysis by STRING found similar results to PANTHER DB, though also noted enrichment for melanocyte migration (biological process term, ZEB2 and KIT genes, log10 fold enrichment = 1.75, FDR = 0.0274), positive regulation of melanocyte differentiation (biological process term, ZEB2 and ADAMTS9 genes, log10 fold enrichment = 1.45, FDR = 0.0495) biological process term, and regulation of developmental pigmentation (biological process term, ZEB2, KIT, IHH and ADAMTS9 genes, log10 fold enrichment = 1.15, FDR = 0.0079)
+
+  Interestingly, SNCA, the gene coding for alpha synuclein, which was part of the regulation of dopamine secretion GO term, was found to be significantly upregulated in the SNpc. This suggests that SNpc neurons may be more vulnerable to neurodegeneration due to a difference in alpha synuclein levels and not neuromelanin, though there may be an as-of-yet undetermined link between alpha synuclein and neuromelanin, a concept that has been explored in numerous papers. 
+  Additionally, the enrichment of upregulated genes for the gene expression GO term urges an differential epigenomic analysis of the SNpc and VTA to better understand the transcription mechanisms that are different between the two brain regions.
+  Overall, all of the GO terms associated with downregulated genes seem to be associated with different cell types, including adrenergic, serotonergic, and GABAergic neurons, as well as oligodendrocytes. Considering this, it may be necessary to perform a cell-type specific analysis so that the differential expression analysis is not masked by the differences in cell type composition of the SNpc and VTA.
+
+
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+COMBINING AGE CORRELATIONS AND mDBR
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+  
+October 1, 2020
+
+  A joint data frame of ACGs and mDBR genes was created to determine if there was any overlap between ACGs and genes differentially expressed in the SNpc relative to the VTA.
+```{r}
+library(dplyr)
+
+ACG_mDBR_joined <- ACGs %>% inner_join(mDBR_genes, by = c("Gene" = "Gene"))
+ACG_mDBR_joined
+
+
+```
+
+  Only two genes were observed to ACGs and differentially expressed in SNpc with respect to the VTA:
+    - MYH11 (r = 0.4609939, FC = 0.446628)
+    - DPYS (r = -0.4766697, FC = 2.517000)
+  
+  One would hypothesize that a gene that increases neuromelanin formation is upregulated in the SNpc and upregulated with age, and a gene that hinders neuromelanin formation is downregulated in the SNpc and downregulated with age. Interestingly, MYH11 and DPYS show the opposite trend: while MYH11 is positively correlated with age, meaning it is upregulated in the elderly, it is downregulated in the SNpc, and while DPYS is negatively correlated with age, meaning it is downregulated in the elderly, it is upregulated in the SNpc. Therefore, both of these genes reject the hypothesis.
+____________________________________________________________________________________________
+
+October 2, 2020
+
+  The small number of genes observed to be both differentially expressed in SNpc and significantly correlated with age may be due to prior filtering. Selecting the top 10% of age-correlated genes and the top 10% of differentially expressed genes may erase some genes that are both differentially expressed and significantly correlated with age. Therefore, rather than selecting just the top 10% based on correlation coefficients and fold changes, all genes were selected whose BH-corrected p-value < 0.05 for both age-correlated genes and mDBR genes. These two data frames were aligned to determine their overlap.
+```{r}
+library(dplyr)
+
+# All significant age correlations
+print(paste(dim(sig_age_correlations)[1], "genes whose expression in the substantia nigra of non-neurological individuals is significantly correlated with age"))
+
+# Redefine an "age-correlated gene" as any gene whose BH-corrected p-value of correlation witha age < 0.05
+ACGs <- sig_age_correlations
+
+# All genes significantly differentially expressed in SNpc relative to VTA (mDBR genes)
+all_sig_SNt_VTAc_probes <- SNt_VTAc_probes %>% 
+  filter(SNt_VTAc_probes$p < 0.05)
+
+all_sig_VTAt_SNc_probes <- VTAt_SNc_probes %>% 
+  filter(VTAt_SNc_probes$p < 0.05)
+
+all_sig_VTAt_SNc_probes <- all_sig_VTAt_SNc_probes[order(all_sig_VTAt_SNc_probes$fold.change, decreasing = TRUE), ]
+
+all_sig_mDBR <- bind_rows(all_sig_SNt_VTAc_probes, all_sig_VTAt_SNc_probes)
+
+# Align mDBR probes to genes (as done previously)
+all_sig_mDBR <- all_sig_mDBR %>% inner_join(probeInfo, by = c("id" = "probe_id"))
+
+print(paste(dim(all_sig_mDBR)[1], "genes that are differentially expressed in the substantia nigra pars compacta relative to the ventral tegmental area in non-neurological individuals"))
+
+
+# Aligning all genes significantly correlated with age and significantly differentially expressed in SNpc
+all_ACG_mDBR_joined <- ACGs %>% inner_join(all_sig_mDBR, by = c("Gene" = "gene.symbol"))
+print(paste(dim(all_ACG_mDBR_joined)[1], "genes that are both significantly correlated with age and differentially expressed in the substantia nigra pars compacta relative to the ventral tegmental area in non-neurological individuals"))
+
+
+```
+
+```{r}
+
+# Overlap of all genes significantly correlated with age and significantly differentially expressed in SNpc
+all_ACG_mDBR_joined[,c("Gene", "Correlation Coefficient", "BH-corrected p-value", "p", "fold.change")]
+
+```
+  As stated previously, one would hypothesize that a gene that increases neuromelanin formation is upregulated in the SNpc and upregulated with age, and a gene that hinders neuromelanin formation is downregulated in the SNpc and upregulated with age. To observe this trend, the fold change from SNpc to VTA of each gene was graphed against its correlation coefficient with age.
+  
+```{r}
+
+plot(all_ACG_mDBR_joined[,"Correlation Coefficient"], log2(all_ACG_mDBR_joined[,"fold.change"]), xlab = "Correlation Coefficient", ylab = "log2(fold change)")
+
+```
+  Evidently, no trend can be established between correlation coefficient and fold change, as there appear to be an equal number of genes with positive and negative log2 fold changes for both positive and negative correlation coefficients. Additionally, the skewedness of correlation cofficients to the two extremes makes it difficult to establish an connection between the two. This can be traced back to the fact that genes with lower p-values of correlation generally have greater absolute values of correlation coefficients, as observed from the volcano plot. Therefore, the act of filtering for p-value of correlation < 0.05 automatically skews the correlation coefficients to highly positive or highly negative. Most likely, performing gene set enrichment analysis of these 118 genes will reveal more information about the pathways involved in neuromelanin formation.
+  
+____________________________________________________________________________________________
+
+October 4, 2020
+
+  The genes were separated into four categories: genes that are upregulated with age and upregulated in the SNpc, genes that are downregulated with age and downregulated in the SNpc, genes that are upregulated with age and downregulated in the SNpc, and genes that are downregulated with age and upregulated in the SNpc. The first two categories correspond to genes that align with the hypothesis, and therefore are the genes that either contribute to or hinder age-dependent neuromelanin accumulation in the SNpc. The last two categories correspond to genes who do not align with the hypothesis. Performing gene set enrichment analysis of these four categories separately may reveal in better detail which biological mechanisms are involved in age-dependent neuromelanin accumulation.
+  
+```{r}
+library(dplyr)
+
+write.csv(x=all_ACG_mDBR_joined[,c("Gene", "Correlation Coefficient", "fold.change")], file="all_ACG_mDBR_joined.csv") # Writes csv file, saves to working directory to allow for simpler gene set enrichment analysis
+
+age_up_SNpc_up <- all_ACG_mDBR_joined %>% filter(all_ACG_mDBR_joined[,"Correlation Coefficient"] > 0 & all_ACG_mDBR_joined[,"fold.change"] > 1)
+age_down_SNpc_down <- all_ACG_mDBR_joined %>% filter(all_ACG_mDBR_joined[,"Correlation Coefficient"] < 0 & all_ACG_mDBR_joined[,"fold.change"] < 1)
+age_up_SNpc_down <- all_ACG_mDBR_joined %>% filter(all_ACG_mDBR_joined[,"Correlation Coefficient"] > 0 & all_ACG_mDBR_joined[,"fold.change"] < 1)
+age_down_SNpc_up <- all_ACG_mDBR_joined %>% filter(all_ACG_mDBR_joined[,"Correlation Coefficient"] < 0 & all_ACG_mDBR_joined[,"fold.change"] > 1)
+
+# Genes that are upregulated with age and upregulated in the SNpc,
+age_up_SNpc_up[,c("Gene", "Correlation Coefficient", "fold.change")]
+
+
+# Genes that are downregulated with age and downregulated in the SNpc
+age_down_SNpc_down[,c("Gene", "Correlation Coefficient", "fold.change")]
+write.csv(x=age_down_SNpc_down[,c("Gene", "Correlation Coefficient", "fold.change")], file="age_down_SNpc_down.csv") # Writes csv file, saves to working directory to allow for simpler gene set enrichment analysis
+
+
+# Genes that are upregulated with age and downregulated in the SNpc
+age_up_SNpc_down[,c("Gene", "Correlation Coefficient", "fold.change")]
+write.csv(x=age_up_SNpc_down[,c("Gene", "Correlation Coefficient", "fold.change")], file="age_up_SNpc_down.csv") # Writes csv file, saves to working directory to allow for simpler gene set enrichment analysis
+
+
+# Genes that are downregulated with age and upregulated in the SNpc
+age_down_SNpc_up[,c("Gene", "Correlation Coefficient", "fold.change")]
+write.csv(x=age_down_SNpc_up[,c("Gene", "Correlation Coefficient", "fold.change")], file="age_down_SNpc_up.csv") # Writes csv file, saves to working directory to allow for simpler gene set enrichment analysis
+
+
+```
+  
+  Gene set enrichment analysis was performed for the last three categories (the first category, both upregulated with age and in the SNpc, only contained three genes), each as one gene set, as well as all 118 genes that are both significantly correlated with age and differentially expressed in the SNpc as another gene set. These gene sets were inputted into the PANTHER classification system for gene ontology (GO) enrichment analysis. The goal of this was to identify the GO terms associated with biological processes for which each gene set is enriched using Fischer's exact test with false discovery rate calculation (search for "biological process"). A search was also done for enrichment of cellular components (search for "cellular components" in PANTHER database). Results in PANTHER classification system were deemed significant if the false discovery rate (FDR) p-value < 0.05. These gene sets were also inputted into the STRING database to determine how their proteins interact. While STRING DB does also provide GO enrichment analysis, PANTHER DB allows for the input of more genes, therefore GO results from PANTHER DB were preferred. The results of this analysis are listed below:
+  
+PANTHER DB:
+  Age down, SNpc down:
+    - No statistically significant results for both biological process search and cellular component search
+  Age up, SNpc down:
+    - No statistically significant results for both biological process search and cellular component search
+  Age down, SNpc up:
+    - No statistically significant results for both biological process search and cellular component search
+  All 118 genes:
+    - No statistically significant results for both biological process search and cellular component search
+    
+STRING DB:
+  Age down, SNpc down: 30 proteins mapped to 30 genes
+    - No interactions between any proteins, no significant GO term enrichment results
+  Age up, SNpc down: 16 proteins mapped to 16 genes
+    - High confidence (0.700) interaction between MYH11 and TAGLN
+    - Enrichment for MAP kinase tyrosine/serine/threonine phosphatase activity (strength = 2.27, FDR = 0.0065)
+  Age down, SNpc up: 69 proteins mapped to 69 genes
+    - SOD1 appeared to be a hub center, with highest confidence (0.900) interactions with TXND1, GPX4
+    - COX7C, UQCR11, NDUFA6, COA6 all have highest confidence interactions with each other
+    - Enrichment for glyceraldehyde-3-phosphate dehydrogenase (NAD+) (non-phosphorylating) activity, nucleobase binding
+  All 118 genes: 117 proteins mapped to 118 genes
+    - ALDH2, CAT, ALDH3A2 showed highest confidence interactions with each other
+    - No other new connections between proteins
+    - No significant enrichment detected
+  
+  While no statistically significant results were found, there were still a number of genes in these sets known to be associated with the melanosome/pigment granule GO term from enrichment analysis on ACGs. These included OCA2 (r = -0.3195436, FC = 0.3787879), RAB9A (-0.3879255, FC = 0.5938242), and YWHAZ (r = -0.3164595, FC = 1.415). The reason for the observation that no significantly enriched pathways is likely due to the fact that there are a relatively small number of genes in each gene set.
+  
+  
+
